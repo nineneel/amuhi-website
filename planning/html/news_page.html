@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AMUHI News - Latest Updates</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0EA5E9", // Sky Blue/Cyan used in buttons/accents
+                        secondary: "#1E3A8A", // Dark Blue for headers/footers
+                        "background-light": "#F0F9FF", // Very light blue/white
+                        "background-dark": "#0F172A", // Slate 900
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B", // Slate 800
+                        "text-main-light": "#1E293B",
+                        "text-main-dark": "#F1F5F9",
+                        "text-muted-light": "#64748B",
+                        "text-muted-dark": "#94A3B8",
+                    },
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'glow': '0 0 20px rgba(14, 165, 233, 0.5)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>.bg-pattern {
+            background-image: radial-gradient(#0EA5E9 1px, transparent 1px);
+            background-size: 24px 24px;
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-body transition-colors duration-300">
+<nav class="w-full py-6 px-6 lg:px-12 flex justify-between items-center relative z-20 bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md sticky top-0 border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-br from-secondary to-primary rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                A
+            </div>
+<span class="text-2xl font-display font-bold text-secondary dark:text-white tracking-tight">AMUHI</span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round text-secondary dark:text-white">light_mode</span>
+</button>
+<a class="font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary transition" href="#">Login</a>
+<a class="bg-secondary text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary transition shadow-lg shadow-blue-900/20" href="#subscribe">
+                Subscribe
+            </a>
+</div>
+</nav>
+<header class="relative pt-12 pb-16 px-6 lg:px-12 overflow-hidden bg-white dark:bg-surface-dark/30">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-50 to-transparent dark:from-blue-900/10 dark:to-transparent opacity-60 -z-10"></div>
+<div class="max-w-7xl mx-auto">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-secondary dark:text-blue-200 px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+<span class="material-icons-round text-base">newspaper</span>
+                    News &amp; Insights
+                </div>
+<h1 class="text-4xl lg:text-5xl font-display font-bold leading-tight text-secondary dark:text-white mb-6">
+                    Latest Updates from the <span class="text-primary">Hajj &amp; Umrah</span> World
+                </h1>
+<p class="text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                    Stay informed with the latest announcements, regulations, and success stories from the AMUHI community and the global industry.
+                </p>
+</div>
+<div class="mt-12 bg-white dark:bg-surface-dark p-2 rounded-2xl shadow-soft border border-gray-100 dark:border-gray-700 flex flex-col md:flex-row gap-2 max-w-4xl">
+<div class="flex-1 relative">
+<span class="material-icons-round absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">search</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-xl bg-transparent border-none focus:ring-0 text-secondary dark:text-white placeholder-gray-400" placeholder="Search news, topics, or keywords..." type="text"/>
+</div>
+<div class="h-px md:h-auto md:w-px bg-gray-200 dark:bg-gray-700 my-2 md:my-0"></div>
+<div class="flex-shrink-0 relative group">
+<button class="w-full md:w-auto px-6 py-3 text-left md:text-center text-text-muted-light dark:text-text-muted-dark font-medium hover:text-secondary dark:hover:text-white flex justify-between items-center gap-2">
+<span>All Categories</span>
+<span class="material-icons-round">expand_more</span>
+</button>
+</div>
+<button class="bg-secondary hover:bg-primary text-white px-8 py-3 rounded-xl font-bold transition shadow-md">
+                    Search
+                </button>
+</div>
+</div>
+</header>
+<section class="py-12 px-6 lg:px-12 bg-background-light dark:bg-background-dark relative">
+<div class="absolute top-0 left-0 w-full h-full bg-pattern opacity-30 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 group cursor-pointer">
+<div class="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden shadow-xl">
+<img alt="Large gathering of pilgrims" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFXWAvdPlyJesEACbpsiVlG2wyEhoHddmVeyG4msGlmSRPeXTk5g3aAk0_4YAy6WcEnfyosNDX-KUlBrb7h9MGaLNsaYwbabQS7W_cdsR8uVJJRrJ_8FARgP-VA_l6NPEBiDiuKMywXS6NeNu0aY2yP7iwKIAXS4C7heubPPOuu3z91V_jcrZLzIpczWJPcxkjK-LZgpZ-YpHGglcshLW5TEwdanqYvbqzc8CexXlXQpzF04gNlfiEcxmrLLUDVFzCERaYUsRXCmk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 lg:p-10 w-full">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Featured</span>
+<span class="text-gray-300 text-sm flex items-center gap-1"><span class="material-icons-round text-sm">schedule</span> 2 hours ago</span>
+</div>
+<h2 class="text-2xl lg:text-4xl font-display font-bold text-white mb-4 leading-tight group-hover:text-blue-200 transition">
+                        New Visa Regulations for 2024 Umrah Season Announced
+                    </h2>
+<p class="text-gray-300 line-clamp-2 max-w-2xl mb-6">
+                        The Ministry of Hajj and Umrah has released updated guidelines for international pilgrims, aiming to streamline the visa application process and improve the overall spiritual journey experience.
+                    </p>
+<span class="inline-flex items-center gap-2 text-white font-bold border-b border-primary pb-1 group-hover:text-primary transition">
+                        Read Full Story <span class="material-icons-round text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="font-display font-bold text-xl text-secondary dark:text-white flex items-center gap-2">
+<span class="material-icons-round text-primary">trending_up</span> Trending Now
+                </h3>
+<article class="bg-white dark:bg-surface-dark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition group cursor-pointer">
+<div class="flex gap-4">
+<div class="flex-1">
+<span class="text-xs font-bold text-primary mb-2 block uppercase">Technology</span>
+<h4 class="font-bold text-secondary dark:text-white leading-snug group-hover:text-primary transition">
+                            AMUHI Digital App Hits 50k Downloads
+                        </h4>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-2">Oct 24, 2023</p>
+</div>
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="App interface" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy9NlMMrYYAhbfUnMhK9_zGnN1RgYIe5zAc4LE_9IvgRA9n5oeVvx-bL5wrOwV0PvKCJpdu3TWBhxYI7Javz3638EXzzIZfpvPoINdqXW3XZxzougyaf5UBgXFvpibe3yPBeo6Xcg3PVqElGBvxXw5k9WVPhr8z6mjcssw5iILgx1xb7d-TMk_Rydk7FI8kt4zX6HlkNs1fe5yzvAwszb2FgEJ8_azlP8pCFbaluZj-CFIP6HsQJ1EZYHzcaz3nYYpIH9TeTZN0dM"/>
+</div>
+</div>
+</article>
+<article class="bg-white dark:bg-surface-dark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition group cursor-pointer">
+<div class="flex gap-4">
+<div class="flex-1">
+<span class="text-xs font-bold text-primary mb-2 block uppercase">Events</span>
+<h4 class="font-bold text-secondary dark:text-white leading-snug group-hover:text-primary transition">
+                            Recap: International Umrah Hajj Forum 2023
+                        </h4>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-2">Oct 20, 2023</p>
+</div>
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Conference hall" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Eu9ZSflquqGmlIp-VdRonEItNKj83_AxyA0PyTO2bDeqUBEUB8YEhPS1bIUVK1ewp-8WhlecxE5Urxo_wM7mvCh9VvNvAbZ2_kvxYQo9KmfdDsl5fG1TMeLtHtoW8R9H8LtEyMCZKq-6SxZeizzzj4JVBDOW1SAPAbu7xGIPszk9Ni1MWz-MPDtyRcY3MmWuR__BlCyX0_sG5ZCqCS3HBvm8T9L-n6UibmQdq38Cwp9V1xrLcExHVx1Jr5XwVgfReO9A_B67yYQ"/>
+</div>
+</div>
+</article>
+<article class="bg-white dark:bg-surface-dark p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition group cursor-pointer">
+<div class="flex gap-4">
+<div class="flex-1">
+<span class="text-xs font-bold text-primary mb-2 block uppercase">Regulation</span>
+<h4 class="font-bold text-secondary dark:text-white leading-snug group-hover:text-primary transition">
+                            Flight Quotas Increased for Southeast Asia
+                        </h4>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-2">Oct 18, 2023</p>
+</div>
+<div class="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
+<img alt="Airplane wing" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATDad6mi36ulNORdG7-rYiOMME7zt2ZhNn3FmgbhPTVnk15Qkx_pfO2WDsxor8T-Zez24GxZuVEOcLw9jWGIN1Tpi1ngR3dlShKf6nwjr8EFZhXMi2vXGNbMoPfZHYx6e_iZrC6T5NuP70KlbsmLCPHIMPoTAXeI_VpZsG63MXv3oll5ct5FoGGSGBRwm3usV8fh7pO-Uh40PdTajC7nD8qqT3Um3KvwDZU1NrBrOkPsvnANU0F3p-6yoNjOBJMIKvGziHS8GtKQk"/>
+</div>
+</div>
+</article>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="text-3xl font-display font-bold text-secondary dark:text-white">Recent News</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark mt-2">Browse the latest articles and press releases.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center text-secondary dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition">
+<span class="material-icons-round">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center hover:bg-primary transition shadow-lg">
+<span class="material-icons-round">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<article class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 flex flex-col h-full group hover:-translate-y-1 transition duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Meeting room" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXswkBzpamGz0ltXrTwFi_MI0U4s3igfXap0sHt_UVm1h-z_1hE88pIFsnYw9b4KrvzPrE5bFrTTFXroh51tolxo3-9W8faq_eAzPBuh8xuZ_ohznhezkE2mdI20BJKoqXacIcU_en7Lexc8HXj2kc7Yj0sXSKC5q5VJxnUWrwoOUlM9om9JtSJmiUu6Um3Y3psqIJSp2DKBbHwwXmxMWwBsE3I6JK2-CDkfQwz61ObtjCBWt3e69wIjp6i45CSCzQNQI7Cg6vLpQ"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-xs font-bold text-secondary dark:text-white px-3 py-1.5 rounded-lg shadow-sm">
+                            Education
+                        </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-xs text-text-muted-light dark:text-text-muted-dark mb-3">
+<span class="material-icons-round text-sm">calendar_today</span> Oct 15, 2023
+                        <span class="mx-1">•</span>
+<span>5 min read</span>
+</div>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-3 leading-snug group-hover:text-primary transition">
+                        AMUHI Academy Launches New Certification Program for Agents
+                    </h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm line-clamp-3 mb-6 flex-grow">
+                        The new curriculum focuses on digital transformation and crisis management, equipping agents with modern tools for modern challenges.
+                    </p>
+<div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-auto">
+<a class="text-sm font-bold text-secondary dark:text-white flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Read More <span class="material-icons-round text-primary text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<article class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 flex flex-col h-full group hover:-translate-y-1 transition duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Partnership signing" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC8OjiZD3NRFwr5Tc7_a4c27_qXcVghOGmoPkLasdf7JgzNu9_0JL1pNHN4uCc_W4wpuvWey-RAyt6H-D-KB4zB6brX77FFmtLVm-qqsWAqJnSdNqkqtogoONRvxVifm90nLLCjRpW98tvNeo0zyOqzC96PD0wSZb6H4Ynrlgw0snGluvTR5oWqC054v9kqbQvYtTzqNi3CUBP9LYPUWjaIzJXx9t0VRYE3QzvL6l65yX3aDJ5wHcp5ArOb1Owg8IH65OFbyRRFFc"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-xs font-bold text-secondary dark:text-white px-3 py-1.5 rounded-lg shadow-sm">
+                            Partnership
+                        </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-xs text-text-muted-light dark:text-text-muted-dark mb-3">
+<span class="material-icons-round text-sm">calendar_today</span> Oct 12, 2023
+                        <span class="mx-1">•</span>
+<span>3 min read</span>
+</div>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-3 leading-snug group-hover:text-primary transition">
+                        Strategic Alliance Formed with Leading Travel Tech Provider
+                    </h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm line-clamp-3 mb-6 flex-grow">
+                        This collaboration aims to bring seamless booking experiences to pilgrims through an integrated platform accessible to all AMUHI members.
+                    </p>
+<div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-auto">
+<a class="text-sm font-bold text-secondary dark:text-white flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Read More <span class="material-icons-round text-primary text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<article class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 flex flex-col h-full group hover:-translate-y-1 transition duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Kaaba view" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-4ZBrnM6z5IPlmmMgtVcytODtan4uCav9u1bq8m9i6x0lpkLLMhU_kIM6wrNZvJmQ4mk3O30e5XbowPpzZqgpN1HiBG4h6UHzWIqJdkSZ-2WU8cKGfDtOHrXQLJfnqNlAx2LWDlrcogfwEIFt4srJG2EJIK9UiGM0HuuNwRe6PCA6ss26gZswE77i-YtWB9h625Y6IQpuKqM17skjE1oLwndlpO9ZfZKw41kC-4fUaSg6ROA0K7UYaKO462m59cHUrdWTsSW3mwU"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-xs font-bold text-secondary dark:text-white px-3 py-1.5 rounded-lg shadow-sm">
+                            Community
+                        </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-xs text-text-muted-light dark:text-text-muted-dark mb-3">
+<span class="material-icons-round text-sm">calendar_today</span> Oct 10, 2023
+                        <span class="mx-1">•</span>
+<span>4 min read</span>
+</div>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-3 leading-snug group-hover:text-primary transition">
+                        Community Spotlight: Serving 10,000 Pilgrims with Excellence
+                    </h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm line-clamp-3 mb-6 flex-grow">
+                        An interview with one of our top-rated agencies on how they manage logistics and spiritual guidance simultaneously.
+                    </p>
+<div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-auto">
+<a class="text-sm font-bold text-secondary dark:text-white flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Read More <span class="material-icons-round text-primary text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<article class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 flex flex-col h-full group hover:-translate-y-1 transition duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Digital map" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWf651VVbBgK7_38-dATclCnYxzlcgz6cGf3ao8lPaiDoJc9Bf81Olu_qQoZssYE0mfHPIBmrgGOIvZ1dyqn8YMwpbxjVoM19Wz04Uc4nU-ZBlU0bEmuafnP1Jc9LoPjtVSdTT2uYhwn6m1L4-YnCzcJfYkI-t6lRNTcYj5Z8p79zF4s-DXzvSxaXfKXsyneP1kOhU6gYoKXhkgLk5YeD55veYpkm3Nuy92Nw1UhycHEVqoeVLB1LlH5f-kB3Ds11RcK2sArIczmY"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-xs font-bold text-secondary dark:text-white px-3 py-1.5 rounded-lg shadow-sm">
+                            Innovation
+                        </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-xs text-text-muted-light dark:text-text-muted-dark mb-3">
+<span class="material-icons-round text-sm">calendar_today</span> Oct 08, 2023
+                        <span class="mx-1">•</span>
+<span>6 min read</span>
+</div>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-3 leading-snug group-hover:text-primary transition">
+                        The Future of Hajj: Digital Mapping and AI Assistance
+                    </h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm line-clamp-3 mb-6 flex-grow">
+                        Exploring how emerging technologies are reshaping the pilgrimage experience, making it safer and more accessible.
+                    </p>
+<div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-auto">
+<a class="text-sm font-bold text-secondary dark:text-white flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Read More <span class="material-icons-round text-primary text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<article class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 flex flex-col h-full group hover:-translate-y-1 transition duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Travel documents" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqWJOSVcBc9NohjfIzeSaZKgN236ozhRQh4uJEZv47ETHZr_hFQ7Wh5andEiS5EBbXBfi_yTiKBeblrwCQdnRlsozVZmwoqlxvmhlgFGm05En3liMZ_T3lDRTI8sJ16UwY8qaI6DRnKbMm_iWfNa4txQanTgZhW3betyzhfRia-GkHt48B47jhXvC29AyvJOSr8AuCzn6LK8iJlQuYqnD9zuQXp26RlvxkRSO6-KEAvMjXrIexdnZr2ZxgEeViIf1eRSX8oPIYpo8"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-xs font-bold text-secondary dark:text-white px-3 py-1.5 rounded-lg shadow-sm">
+                            Regulatory
+                        </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-xs text-text-muted-light dark:text-text-muted-dark mb-3">
+<span class="material-icons-round text-sm">calendar_today</span> Oct 05, 2023
+                        <span class="mx-1">•</span>
+<span>3 min read</span>
+</div>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-3 leading-snug group-hover:text-primary transition">
+                        Update on Health &amp; Safety Protocols for Incoming Groups
+                    </h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm line-clamp-3 mb-6 flex-grow">
+                        Essential information for agency owners regarding the new health requirements issued by local authorities.
+                    </p>
+<div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-auto">
+<a class="text-sm font-bold text-secondary dark:text-white flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Read More <span class="material-icons-round text-primary text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<article class="bg-white dark:bg-surface-dark rounded-3xl overflow-hidden shadow-soft border border-gray-100 dark:border-gray-700 flex flex-col h-full group hover:-translate-y-1 transition duration-300">
+<div class="relative h-56 overflow-hidden">
+<img alt="Seminar crowd" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxeewkrVnwX6vMGaelz8VvMmyOCo6OkaaoWMRY-ZPx33UNmJFMB--mqta-uVxttHUShE560PqVuqZxW8rA4yMUCLmkrku1kskfYKBk-yeVzoOLFljDebOIJViguaTYw3__oDefvh4Gbp9whPXCRxgf9ag3ZGCKvwzhQ0LBOVkNowFeX4IQGzKhlYuPrOQhGEe5GUqpakZmPYzDIfAAD0qMfOY2C5w57DhgFOl-XhMDoJDRzV7SLb5gUeDe5RmrKzhv2CBUpSLWROA"/>
+<div class="absolute top-4 left-4">
+<span class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur text-xs font-bold text-secondary dark:text-white px-3 py-1.5 rounded-lg shadow-sm">
+                            Events
+                        </span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-xs text-text-muted-light dark:text-text-muted-dark mb-3">
+<span class="material-icons-round text-sm">calendar_today</span> Oct 01, 2023
+                        <span class="mx-1">•</span>
+<span>2 min read</span>
+</div>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-3 leading-snug group-hover:text-primary transition">
+                        Early Bird Registration Open for Annual Summit
+                    </h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm line-clamp-3 mb-6 flex-grow">
+                        Don't miss the opportunity to network with over 500 industry leaders at our upcoming summit in Jakarta.
+                    </p>
+<div class="pt-4 border-t border-gray-100 dark:border-gray-700 mt-auto">
+<a class="text-sm font-bold text-secondary dark:text-white flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                            Read More <span class="material-icons-round text-primary text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<div class="mt-12 text-center">
+<button class="bg-white dark:bg-surface-dark text-secondary dark:text-white border border-gray-200 dark:border-gray-700 px-8 py-3.5 rounded-full font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition shadow-sm inline-flex items-center gap-2">
+                    Load More Articles
+                    <span class="material-icons-round">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 lg:px-12 bg-secondary text-white relative overflow-hidden" id="subscribe">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-white/5 rounded-l-full -z-0"></div>
+<div class="absolute -bottom-20 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl -z-0"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<span class="material-icons-round text-5xl text-primary mb-6">mark_email_unread</span>
+<h2 class="text-3xl lg:text-5xl font-display font-bold mb-6">Never Miss an Update</h2>
+<p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">
+                Subscribe to our newsletter and get the latest industry news, regulatory updates, and exclusive AMUHI insights delivered directly to your inbox.
+            </p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-grow px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent backdrop-blur-sm" placeholder="Enter your email address" type="email"/>
+<button class="bg-primary hover:bg-blue-400 text-white px-8 py-4 rounded-xl font-bold transition shadow-lg shadow-blue-900/50 whitespace-nowrap">
+                    Subscribe Now
+                </button>
+</form>
+<p class="text-xs text-blue-200/60 mt-6">We respect your privacy. Unsubscribe at any time.</p>
+</div>
+</section>
+<footer class="bg-gradient-to-br from-secondary to-blue-900 text-white pt-20 pb-28 px-6 lg:px-12 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100"><path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"></path></svg>
+</div>
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+<div class="space-y-6">
+<h4 class="font-bold text-lg border-b border-blue-400/30 pb-2 inline-block">Address</h4>
+<div class="text-sm text-blue-100 space-y-2">
+<p class="font-bold text-white">AMUHI (Asosiasi Milenial Umrah Haji Indonesia)</p>
+<p>Kantor Pusat Amuhi:</p>
+<p>Kota Kasablanka, Prudential Centre, Lantai 7,</p>
+<p>Jl. Casablanca Raya Kav No.88, Jakarta Selatan.</p>
+</div>
+<div class="text-sm text-blue-100 space-y-1 pt-4">
+<p><span class="opacity-70">Panitia:</span> 021-38825167</p>
+<p><span class="opacity-70">Email:</span> milenialumrahhaji@gmail.com</p>
+<p><span class="opacity-70">Web:</span> www.amuhi.id</p>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-lg border-b border-blue-400/30 pb-2 inline-block mb-4">Association</h4>
+<ul class="space-y-2 text-sm text-blue-100">
+<li><a class="hover:text-primary transition" href="#">Home</a></li>
+<li><a class="hover:text-primary transition" href="#">Program</a></li>
+<li><a class="hover:text-primary transition" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition" href="#">Partnership</a></li>
+<li><a class="hover:text-primary transition" href="#">Edu Journal</a></li>
+<li><a class="hover:text-primary transition" href="#">Resources</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg border-b border-blue-400/30 pb-2 inline-block mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-blue-100">
+<li><a class="hover:text-primary transition" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition" href="#">Language</a></li>
+</ul>
+</div>
+<div class="flex flex-col justify-end lg:items-end">
+<div class="flex gap-4 text-xs text-blue-200 uppercase tracking-widest">
+<a class="hover:text-white transition" href="#">link email</a>
+<a class="hover:text-white transition" href="#">link instagram</a>
+<a class="hover:text-white transition" href="#">link youtube</a>
+</div>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-4xl">
+<div class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur-md rounded-full px-2 py-2 shadow-2xl border border-blue-100 dark:border-gray-700 flex justify-between items-center">
+<ul class="hidden md:flex items-center gap-1 px-4">
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">Home</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">Program</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">About Us</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">Partnership</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-secondary dark:text-white bg-blue-50 dark:bg-blue-900/40" href="#">Edu Journal</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">Resources</a></li>
+</ul>
+<button class="md:hidden p-3 text-secondary dark:text-white">
+<span class="material-icons-round">menu</span>
+</button>
+<a class="flex items-center gap-2 bg-[#4CAF50] hover:bg-[#43a047] text-white px-5 py-2.5 rounded-full font-bold text-sm transition shadow-lg ml-auto md:ml-0" href="#">
+                Chat with Us
+                <img alt="WhatsApp" class="w-5 h-5 filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0zAGr93mnl5xi_h8SlDjmlSUD69Rw46wdabKjpvU-H1rZOOGj47I2qkXRgOP74ydS-pE4MKlzjXJLYRIrNToldg9aVXjvgMSJJJMwBAokUVvLGeuyo2gKgCbaiA75VvFSpMDddP7IOSidxhE5a2dh4P_BTmIm9z99FYbIQ8KgelC1zwgvowU94ZcHL9yfetZ7x8tKcSTbGXI4-cRniI3sbr8sgGSne6C-37blvTG0ospkDo-yvR4vaw7Be3iowSbK3SBrp15eABE"/>
+</a>
+</div>
+</div>
+</body></html>

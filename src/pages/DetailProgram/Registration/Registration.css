@@ -1,0 +1,107 @@
+.program-registration {
+  position: relative;
+  padding: var(--spacing-4xl) 0;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.registration-accent {
+  position: absolute;
+  inset: 0;
+  right: -25%;
+  background: linear-gradient(135deg, rgba(var(--primary-blue-rgb), 0.08) 0%, rgba(var(--primary-blue-rgb), 0) 60%);
+  border-top-left-radius: 220px;
+  border-bottom-left-radius: 220px;
+}
+
+.registration-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.registration-copy h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 3vw, 3rem);
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-md);
+}
+
+.registration-copy h2 span {
+  color: var(--primary-light);
+}
+
+.registration-copy p {
+  color: var(--gray-600);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-xl);
+}
+
+.registration-features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.registration-feature {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-md);
+  align-items: start;
+}
+
+.registration-feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-xl);
+  background: rgba(var(--primary-light-rgb), 0.25);
+  display: grid;
+  place-items: center;
+  color: var(--primary-navy);
+}
+
+.registration-feature h4 {
+  color: var(--primary-navy);
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.registration-feature p {
+  color: var(--gray-600);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.registration-form-card {
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+  z-index: 1;
+}
+
+.registration-form-card .lead-form {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .registration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-form-card {
+    order: -1;
+  }
+
+  .registration-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .program-registration {
+    padding: var(--spacing-3xl) 0;
+  }
+}

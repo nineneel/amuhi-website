@@ -1,0 +1,201 @@
+.detail-hero {
+  position: relative;
+  overflow: hidden;
+  padding: var(--spacing-4xl) 0 var(--spacing-5xl);
+  background: linear-gradient(180deg, rgba(var(--primary-light-rgb), 1) 0, rgba(var(--primary-light-rgb), 0.5) 50%, rgba(var(--primary-light-rgb), 0.4) 70%, rgba(var(--primary-light-rgb), 1) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y;
+  color: var(--primary-navy);
+}
+
+.detail-hero__accent {
+  position: absolute;
+  z-index: 0;
+  filter: blur(2px);
+}
+
+.detail-hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--spacing-3xl);
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+}
+
+.detail-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.detail-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: max-content;
+  background: var(--white);
+  color: var(--primary-navy);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 10px 30px rgba(var(--primary-blue-rgb), 0.08);
+}
+
+.detail-hero__badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--primary-blue);
+}
+
+.detail-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--primary-navy);
+}
+
+.detail-hero__title-accent {
+  color: var(--white);
+  display: inline-block;
+}
+
+.detail-hero__lead {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.detail-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.detail-hero__primary {
+  padding-inline: 1.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.detail-hero__secondary {
+  background: var(--white);
+  border: 2px solid rgba(var(--primary-navy-rgb), 0.15);
+}
+
+.detail-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.detail-hero__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.detail-hero__meta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-lg);
+  background: rgba(var(--white-rgb), 1);
+  color: var(--primary-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-hero__visual {
+  position: relative;
+}
+
+.detail-hero__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid var(--white);
+  background: var(--gray-100);
+}
+
+.detail-hero__image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.detail-hero__image-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+.detail-hero__image-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(var(--black-rgb), 0) 0%, rgba(var(--black-rgb), 0.7) 100%);
+  color: var(--white);
+}
+
+.detail-hero__overlay-title {
+  font-weight: 700;
+}
+
+.detail-hero__overlay-subtitle {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.detail-hero__shadow {
+  position: absolute;
+  inset: 5% -6% -2% -2%;
+  background: rgba(var(--primary-blue-rgb), 0.12);
+  border-radius: 28px;
+  transform: rotate(3deg);
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .detail-hero {
+    padding: var(--spacing-3xl) 0 var(--spacing-4xl);
+  }
+
+  .detail-hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .detail-hero__visual {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .detail-hero__badge {
+    font-size: 0.8rem;
+  }
+
+  .detail-hero__title {
+    font-size: 2.4rem;
+  }
+
+  .detail-hero__lead {
+    font-size: 1rem;
+  }
+
+  .detail-hero__meta {
+    gap: var(--spacing-md);
+  }
+}

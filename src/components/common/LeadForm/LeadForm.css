@@ -1,0 +1,128 @@
+.lead-form {
+  --lead-form-bg: rgba(var(--primary-navy-rgb), 0.85);
+  --lead-form-text: var(--white);
+  --lead-form-subtle: rgba(var(--white-rgb), 0.82);
+  --lead-form-input-bg: var(--white);
+  --lead-form-border: transparent;
+  --lead-form-button-bg: var(--primary-light);
+  --lead-form-button-text: var(--primary-navy);
+  --lead-form-shadow: var(--shadow-xl);
+
+  background: var(--lead-form-bg);
+  color: var(--lead-form-text);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--lead-form-shadow);
+  border: 1px solid var(--lead-form-border);
+}
+
+.lead-form[data-variant='light'] {
+  --lead-form-bg: var(--white);
+  --lead-form-text: var(--primary-navy);
+  --lead-form-subtle: var(--gray-600);
+  --lead-form-input-bg: var(--gray-50);
+  --lead-form-border: rgba(var(--primary-navy-rgb), 0.08);
+  --lead-form-button-bg: var(--primary-light);
+  --lead-form-button-text: var(--primary-navy);
+  --lead-form-shadow: var(--shadow-lg);
+}
+
+.lead-form__header {
+  margin-bottom: 20px;
+}
+
+.lead-form__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--lead-form-text);
+}
+
+.lead-form__subtitle {
+  margin: 0;
+  color: var(--lead-form-subtle);
+  font-size: 0.95rem;
+}
+
+.lead-form__toggle {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.lead-form__toggle label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--lead-form-subtle);
+  cursor: pointer;
+}
+
+.lead-form__toggle input[type='radio'] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-blue);
+}
+
+.lead-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lead-form__group input {
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--lead-form-input-bg);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: var(--primary-navy);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.lead-form__group input:focus {
+  outline: none;
+  border-color: rgba(var(--primary-navy-rgb), 0.15);
+  box-shadow: 0 0 0 2px rgba(var(--primary-light-rgb), 0.9);
+}
+
+.lead-form__group input::placeholder {
+  color: var(--gray-400);
+}
+
+.lead-form__submit {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--lead-form-button-bg);
+  color: var(--lead-form-button-text);
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: 999px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  margin-top: 8px;
+  box-shadow: var(--shadow-lg);
+}
+
+.lead-form__submit:hover {
+  background: var(--primary-cyan);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 640px) {
+  .lead-form {
+    padding: 24px;
+  }
+
+  .lead-form__toggle {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

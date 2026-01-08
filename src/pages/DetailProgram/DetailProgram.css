@@ -1,0 +1,8 @@
+.detail-program {
+  background: var(--bg-gradient-light);
+  color: var(--primary-navy);
+}
+
+.detail-program section {
+  position: relative;
+}

@@ -1,0 +1,29 @@
+.event-carousel-wrapper {
+  width: 100%;
+}
+
+.event-swiper {
+  padding: var(--spacing-md) 4px var(--spacing-3xl) !important;
+}
+
+.event-swiper .swiper-slide {
+  height: auto;
+}
+
+.event-swiper .swiper-slide > * {
+  height: 100%;
+}
+
+.event-swiper .swiper-pagination-bullet {
+  background: var(--primary-navy);
+  opacity: 0.25;
+  width: 10px;
+  height: 10px;
+}
+
+.event-swiper .swiper-pagination-bullet-active {
+  background: var(--primary-blue);
+  opacity: 1;
+  width: 24px;
+  border-radius: 6px;
+}

@@ -1,0 +1,140 @@
+#events {
+  /* background: rgba(var(--white-rgb), 0.9) !important; */
+  background: linear-gradient(180deg, rgba(var(--white-rgb), 1) 0, rgba(var(--white-rgb), 0.6) 50%, rgba(var(--white-rgb), 0.7) 70%, rgba(var(--white-rgb), 1) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y;
+
+  padding: var(--spacing-5xl) 0;
+}
+
+.events-section .section-title {
+  text-align: left;
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-3xl);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.event-carousel-wrapper {
+  margin-top: var(--spacing-lg);
+}
+
+.event-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  min-height: 550px;
+  /* Made higher as requested */
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  background-color: var(--gray-200);
+}
+
+/* .event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+} */
+
+.event-card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* Centered as requested */
+  z-index: 1;
+  transition: transform var(--transition-slow);
+}
+
+/* Removed hover zoom effect as requested */
+
+.event-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Blue gradient overlay */
+  background: linear-gradient(180deg,
+      rgba(32, 57, 152, 0.7) 0%,
+      rgba(32, 57, 152, 0.5) 40%,
+      rgba(217, 224, 251, 0.3) 50%,
+      rgba(32, 57, 152, 0.0) 100%);
+  z-index: 2;
+}
+
+.event-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--spacing-xl);
+  color: var(--white);
+}
+
+.event-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+  text-align: left;
+}
+
+.event-description {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  margin-bottom: var(--spacing-lg);
+}
+
+.event-impact {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: var(--spacing-lg);
+}
+
+.event-spacer {
+  flex-grow: 1;
+}
+
+.event-cta {
+  display: inline-block;
+  width: 100%;
+  background: var(--white);
+  color: var(--primary-navy);
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  margin-top: auto;
+}
+
+.event-cta:hover {
+  background: var(--gray-100);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .events-section .section-title {
+    text-align: center;
+  }
+
+  .event-card {
+    min-height: 400px;
+  }
+}

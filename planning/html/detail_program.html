@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AMUHI Academy - Program Details</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0EA5E9", // Sky Blue/Cyan used in buttons/accents
+                        secondary: "#1E3A8A", // Dark Blue for headers/footers
+                        "background-light": "#F0F9FF", // Very light blue/white
+                        "background-dark": "#0F172A", // Slate 900
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B", // Slate 800
+                        "text-main-light": "#1E293B",
+                        "text-main-dark": "#F1F5F9",
+                        "text-muted-light": "#64748B",
+                        "text-muted-dark": "#94A3B8",
+                    },
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'glow': '0 0 20px rgba(14, 165, 233, 0.5)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>.bg-pattern {
+            background-image: radial-gradient(#0EA5E9 1px, transparent 1px);
+            background-size: 24px 24px;
+        }.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-body transition-colors duration-300">
+<nav class="w-full py-6 px-6 lg:px-12 flex justify-between items-center relative z-20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-br from-secondary to-primary rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                A
+            </div>
+<span class="text-2xl font-display font-bold text-secondary dark:text-white tracking-tight">AMUHI</span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round text-secondary dark:text-white">light_mode</span>
+</button>
+<a class="font-medium text-text-muted-light dark:text-text-muted-dark hover:text-primary transition" href="#">Login</a>
+<a class="bg-secondary text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary transition shadow-lg shadow-blue-900/20" href="#register">
+                Member Area
+            </a>
+</div>
+</nav>
+<header class="relative pt-8 pb-20 lg:pt-16 lg:pb-32 px-6 lg:px-12 overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-b from-blue-100 to-transparent dark:from-blue-900/20 dark:to-transparent opacity-50 rounded-bl-[100px] -z-10"></div>
+<div class="absolute -top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-secondary dark:text-blue-200 px-4 py-1.5 rounded-full text-sm font-semibold">
+<span class="material-icons-round text-base">school</span>
+                    Education &amp; Certification
+                </div>
+<h1 class="text-4xl lg:text-6xl font-display font-bold leading-tight text-secondary dark:text-white">
+                    AMUHI <span class="text-primary">Academy</span>
+</h1>
+<p class="text-lg text-text-muted-light dark:text-text-muted-dark leading-relaxed max-w-xl">
+                    The premier learning and certification hub for industry players in the Hajj &amp; Umrah ecosystem. Elevate your professionalism and service standards through our comprehensive curriculum.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-secondary text-white px-8 py-3.5 rounded-full font-bold hover:bg-primary transition shadow-xl shadow-blue-900/20 flex items-center gap-2" href="#register">
+                        Register Now
+                        <span class="material-icons-round">arrow_forward</span>
+</a>
+<a class="bg-white dark:bg-surface-dark text-secondary dark:text-white border border-gray-200 dark:border-gray-700 px-8 py-3.5 rounded-full font-bold hover:bg-gray-50 dark:hover:bg-gray-800 transition flex items-center gap-2" href="#curriculum">
+<span class="material-icons-round">play_circle</span>
+                        Watch Preview
+                    </a>
+</div>
+<div class="flex items-center gap-6 pt-6 text-sm text-text-muted-light dark:text-text-muted-dark">
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-primary">verified</span>
+                        Official Certification
+                    </div>
+<div class="flex items-center gap-2">
+<span class="material-icons-round text-primary">groups</span>
+                        500+ Graduates
+                    </div>
+</div>
+</div>
+<div class="relative">
+<div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-surface-dark">
+<img alt="Students in a seminar learning about Hajj and Umrah management" class="w-full h-auto object-cover transform hover:scale-105 transition duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFXWAvdPlyJesEACbpsiVlG2wyEhoHddmVeyG4msGlmSRPeXTk5g3aAk0_4YAy6WcEnfyosNDX-KUlBrb7h9MGaLNsaYwbabQS7W_cdsR8uVJJRrJ_8FARgP-VA_l6NPEBiDiuKMywXS6NeNu0aY2yP7iwKIAXS4C7heubPPOuu3z91V_jcrZLzIpczWJPcxkjK-LZgpZ-YpHGglcshLW5TEwdanqYvbqzc8CexXlXQpzF04gNlfiEcxmrLLUDVFzCERaYUsRXCmk"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+<p class="font-bold text-lg">Next Cohort Starts: Oct 25th</p>
+<p class="text-sm opacity-90">Limited seats available</p>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 w-full h-full bg-primary/20 rounded-3xl -z-10 rotate-3"></div>
+</div>
+</div>
+</header>
+<section class="py-12 px-6 lg:px-12 bg-white dark:bg-surface-dark/50">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="p-6 rounded-2xl bg-background-light dark:bg-surface-dark border border-blue-100 dark:border-gray-700 text-center">
+<div class="w-12 h-12 mx-auto bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-primary mb-3">
+<span class="material-icons-round">schedule</span>
+</div>
+<h3 class="font-bold text-lg text-secondary dark:text-white">6 Weeks</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Duration</p>
+</div>
+<div class="p-6 rounded-2xl bg-background-light dark:bg-surface-dark border border-blue-100 dark:border-gray-700 text-center">
+<div class="w-12 h-12 mx-auto bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-primary mb-3">
+<span class="material-icons-round">signal_cellular_alt</span>
+</div>
+<h3 class="font-bold text-lg text-secondary dark:text-white">Intermediate</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Level</p>
+</div>
+<div class="p-6 rounded-2xl bg-background-light dark:bg-surface-dark border border-blue-100 dark:border-gray-700 text-center">
+<div class="w-12 h-12 mx-auto bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-primary mb-3">
+<span class="material-icons-round">language</span>
+</div>
+<h3 class="font-bold text-lg text-secondary dark:text-white">Bahasa / Eng</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Language</p>
+</div>
+<div class="p-6 rounded-2xl bg-background-light dark:bg-surface-dark border border-blue-100 dark:border-gray-700 text-center">
+<div class="w-12 h-12 mx-auto bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center text-primary mb-3">
+<span class="material-icons-round">workspace_premium</span>
+</div>
+<h3 class="font-bold text-lg text-secondary dark:text-white">Certified</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Outcome</p>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 lg:px-12" id="curriculum">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2 space-y-10">
+<div>
+<h2 class="text-3xl font-display font-bold text-secondary dark:text-white mb-6">Program Curriculum</h2>
+<p class="text-text-muted-light dark:text-text-muted-dark mb-8">
+                        Designed by industry veterans and regulatory experts, our curriculum ensures you are compliant, competitive, and customer-centric.
+                    </p>
+</div>
+<div class="space-y-4 relative before:absolute before:left-8 before:top-0 before:h-full before:w-0.5 before:bg-blue-200 dark:before:bg-blue-800">
+<div class="relative pl-20 group">
+<div class="absolute left-6 top-0 w-4 h-4 rounded-full bg-secondary border-4 border-white dark:border-background-dark shadow-md z-10 group-hover:scale-125 transition"></div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition">
+<h4 class="text-primary font-bold text-sm mb-1">MODULE 1 • WEEK 1-2</h4>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Regulatory Compliance &amp; Licensing</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm">Understanding the latest regulations from the Ministry of Hajj &amp; Umrah, visa processing systems, and legal requirements.</p>
+</div>
+</div>
+<div class="relative pl-20 group">
+<div class="absolute left-6 top-0 w-4 h-4 rounded-full bg-blue-300 border-4 border-white dark:border-background-dark shadow-md z-10 group-hover:bg-secondary transition"></div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition">
+<h4 class="text-primary font-bold text-sm mb-1">MODULE 2 • WEEK 3-4</h4>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Operational Excellence &amp; Logistics</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm">Best practices in itinerary planning, accommodation management, transportation logistics, and crisis management on the ground.</p>
+</div>
+</div>
+<div class="relative pl-20 group">
+<div class="absolute left-6 top-0 w-4 h-4 rounded-full bg-blue-300 border-4 border-white dark:border-background-dark shadow-md z-10 group-hover:bg-secondary transition"></div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition">
+<h4 class="text-primary font-bold text-sm mb-1">MODULE 3 • WEEK 5-6</h4>
+<h3 class="text-xl font-bold text-secondary dark:text-white mb-2">Digital Marketing &amp; Customer Experience</h3>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm">Leveraging digital platforms (AMUHI Digital) for sales, building trust with pilgrims, and ensuring post-journey satisfaction.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="bg-white dark:bg-surface-dark p-8 rounded-3xl shadow-soft border border-gray-100 dark:border-gray-700">
+<h3 class="text-xl font-display font-bold text-secondary dark:text-white mb-6">What you'll get</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-green-500 bg-green-100 dark:bg-green-900/30 rounded-full p-1 text-sm">check</span>
+<span class="text-text-muted-light dark:text-text-muted-dark text-sm">Official AMUHI Practitioner Certificate</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-green-500 bg-green-100 dark:bg-green-900/30 rounded-full p-1 text-sm">check</span>
+<span class="text-text-muted-light dark:text-text-muted-dark text-sm">Access to AMUHI Network Directory</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-green-500 bg-green-100 dark:bg-green-900/30 rounded-full p-1 text-sm">check</span>
+<span class="text-text-muted-light dark:text-text-muted-dark text-sm">Free use of AMUHI Check verification tool</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-icons-round text-green-500 bg-green-100 dark:bg-green-900/30 rounded-full p-1 text-sm">check</span>
+<span class="text-text-muted-light dark:text-text-muted-dark text-sm">Alumni mentorship program</span>
+</li>
+</ul>
+<div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
+<div class="flex items-center gap-4">
+<img alt="Instructor" class="w-12 h-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXswkBzpamGz0ltXrTwFi_MI0U4s3igfXap0sHt_UVm1h-z_1hE88pIFsnYw9b4KrvzPrE5bFrTTFXroh51tolxo3-9W8faq_eAzPBuh8xuZ_ohznhezkE2mdI20BJKoqXacIcU_en7Lexc8HXj2kc7Yj0sXSKC5q5VJxnUWrwoOUlM9om9JtSJmiUu6Um3Y3psqIJSp2DKBbHwwXmxMWwBsE3I6JK2-CDkfQwz61ObtjCBWt3e69wIjp6i45CSCzQNQI7Cg6vLpQ"/>
+<div>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark uppercase tracking-wider font-semibold">Lead Instructor</p>
+<p class="font-bold text-secondary dark:text-white">Dr. Ahmed Al-Fayed</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-secondary to-blue-800 p-8 rounded-3xl shadow-lg text-white relative overflow-hidden group cursor-pointer">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-10 -mt-10 group-hover:scale-110 transition duration-500"></div>
+<span class="material-icons-round text-4xl mb-4 text-primary">cloud_download</span>
+<h3 class="font-bold text-lg mb-2">Program Syllabus</h3>
+<p class="text-blue-100 text-sm mb-4">Download the full PDF breakdown of the course.</p>
+<button class="text-sm font-bold underline decoration-primary underline-offset-4 hover:text-primary transition">Download PDF</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 lg:px-12 bg-blue-50 dark:bg-surface-dark border-y border-blue-100 dark:border-gray-700">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-center text-3xl font-display font-bold text-secondary dark:text-white mb-12">What Our Alumni Say</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-sm relative">
+<span class="material-icons-round text-6xl text-blue-100 dark:text-blue-900/20 absolute top-4 left-4 -z-0">format_quote</span>
+<p class="text-text-muted-light dark:text-text-muted-dark relative z-10 mb-6 italic">
+                        "Asosiasi yang istimewa Memberikan arah perubahan yang significant haji dan umrah masa depan."
+                    </p>
+<div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-700 pt-4">
+<div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-sm">MI</div>
+<div>
+<h4 class="font-bold text-secondary dark:text-white text-sm">Mochamad Irfan Yusuf</h4>
+<p class="text-xs text-primary">Menteri Haji &amp; Umrah RI</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-lg transform md:-translate-y-4 border-t-4 border-primary relative">
+<span class="material-icons-round text-6xl text-blue-100 dark:text-blue-900/20 absolute top-4 left-4 -z-0">format_quote</span>
+<p class="text-text-muted-light dark:text-text-muted-dark relative z-10 mb-6 italic">
+                        "Bukan sekedar asosiasi, ini adalah sebuah movement masa depan Haji dan Umrah."
+                    </p>
+<div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-700 pt-4">
+<div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-sm">DS</div>
+<div>
+<h4 class="font-bold text-secondary dark:text-white text-sm">Dahnil Simanjuntak</h4>
+<p class="text-xs text-primary">Wakil Menteri Haji</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark p-8 rounded-2xl shadow-sm relative">
+<span class="material-icons-round text-6xl text-blue-100 dark:text-blue-900/20 absolute top-4 left-4 -z-0">format_quote</span>
+<p class="text-text-muted-light dark:text-text-muted-dark relative z-10 mb-6 italic">
+                        "Inilah asosiasi yang modern, profesional, transparent dan terpercaya."
+                    </p>
+<div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-700 pt-4">
+<div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-sm">SH</div>
+<div>
+<h4 class="font-bold text-secondary dark:text-white text-sm">Siti Husniaty S. Sos. I</h4>
+<p class="text-xs text-primary">Ketua Fahmi Ummi DKI</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-12 relative overflow-hidden" id="register">
+<div class="absolute top-0 right-0 w-2/3 h-full bg-blue-50 dark:bg-blue-900/10 rounded-l-[200px] -z-10"></div>
+<div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<h2 class="text-4xl font-display font-bold text-secondary dark:text-white mb-6">
+                    Building a <br/><span class="text-primary">Better Future</span> Together
+                </h2>
+<p class="text-text-muted-light dark:text-text-muted-dark mb-8 text-lg">
+                    Join the next cohort of leaders in the Hajj and Umrah industry. Fill out the form to secure your spot in the AMUHI Academy.
+                </p>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<span class="material-icons-round text-secondary dark:text-blue-300 text-3xl">school</span>
+<h4 class="font-bold text-secondary dark:text-white">Expert Led</h4>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">Learn from the best in the field</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="material-icons-round text-secondary dark:text-blue-300 text-3xl">groups</span>
+<h4 class="font-bold text-secondary dark:text-white">Networking</h4>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark">Connect with agents worldwide</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 w-full">
+<div class="bg-white dark:bg-surface-dark p-8 rounded-3xl shadow-2xl border-t-8 border-secondary relative overflow-hidden">
+<div class="mb-6">
+<h3 class="text-xl font-bold text-secondary dark:text-white">Registration Form</h3>
+<p class="text-sm text-text-muted-light dark:text-text-muted-dark">Let us know you better</p>
+</div>
+<form class="space-y-4">
+<div class="flex gap-4 mb-4">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="text-secondary focus:ring-secondary" name="role" type="radio"/>
+<span class="text-sm text-secondary dark:text-gray-300 font-medium">Owner</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="text-secondary focus:ring-secondary" name="role" type="radio"/>
+<span class="text-sm text-secondary dark:text-gray-300 font-medium">Management</span>
+</label>
+</div>
+<div>
+<input class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border-none focus:ring-2 focus:ring-secondary dark:text-white placeholder-gray-400 text-sm" placeholder="Full Name *" type="text"/>
+</div>
+<div>
+<input class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border-none focus:ring-2 focus:ring-secondary dark:text-white placeholder-gray-400 text-sm" placeholder="Phone Number *" type="tel"/>
+</div>
+<div>
+<input class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border-none focus:ring-2 focus:ring-secondary dark:text-white placeholder-gray-400 text-sm" placeholder="Travel Agency Name *" type="text"/>
+</div>
+<div>
+<input class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border-none focus:ring-2 focus:ring-secondary dark:text-white placeholder-gray-400 text-sm" placeholder="ID Number (KTP/Passport) *" type="text"/>
+</div>
+<button class="w-full bg-gradient-to-r from-secondary to-blue-700 hover:to-primary text-white font-bold py-3 rounded-xl shadow-lg mt-4 transition transform hover:-translate-y-1" type="submit">
+                            Submit Registration
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-gradient-to-br from-secondary to-blue-900 text-white pt-20 pb-28 px-6 lg:px-12 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100"><path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"></path></svg>
+</div>
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+<div class="space-y-6">
+<h4 class="font-bold text-lg border-b border-blue-400/30 pb-2 inline-block">Address</h4>
+<div class="text-sm text-blue-100 space-y-2">
+<p class="font-bold text-white">AMUHI (Asosiasi Milenial Umrah Haji Indonesia)</p>
+<p>Kantor Pusat Amuhi:</p>
+<p>Kota Kasablanka, Prudential Centre, Lantai 7,</p>
+<p>Jl. Casablanca Raya Kav No.88, Jakarta Selatan.</p>
+</div>
+<div class="text-sm text-blue-100 space-y-1 pt-4">
+<p><span class="opacity-70">Panitia:</span> 021-38825167</p>
+<p><span class="opacity-70">Email:</span> milenialumrahhaji@gmail.com</p>
+<p><span class="opacity-70">Web:</span> www.amuhi.id</p>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-lg border-b border-blue-400/30 pb-2 inline-block mb-4">Association</h4>
+<ul class="space-y-2 text-sm text-blue-100">
+<li><a class="hover:text-primary transition" href="#">Home</a></li>
+<li><a class="hover:text-primary transition" href="#">Program</a></li>
+<li><a class="hover:text-primary transition" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition" href="#">Partnership</a></li>
+<li><a class="hover:text-primary transition" href="#">Edu Journal</a></li>
+<li><a class="hover:text-primary transition" href="#">Resources</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-lg border-b border-blue-400/30 pb-2 inline-block mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-blue-100">
+<li><a class="hover:text-primary transition" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition" href="#">Language</a></li>
+</ul>
+</div>
+<div class="flex flex-col justify-end lg:items-end">
+<div class="flex gap-4 text-xs text-blue-200 uppercase tracking-widest">
+<a class="hover:text-white transition" href="#">link email</a>
+<a class="hover:text-white transition" href="#">link instagram</a>
+<a class="hover:text-white transition" href="#">link youtube</a>
+</div>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-4xl">
+<div class="bg-white/90 dark:bg-surface-dark/90 backdrop-blur-md rounded-full px-2 py-2 shadow-2xl border border-blue-100 dark:border-gray-700 flex justify-between items-center">
+<ul class="hidden md:flex items-center gap-1 px-4">
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-secondary dark:text-white bg-blue-50 dark:bg-blue-900/40" href="#">Home</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">Program</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">About Us</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">Partnership</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">Edu Journal</a></li>
+<li><a class="px-4 py-2 rounded-full text-sm font-medium text-text-muted-light dark:text-text-muted-dark hover:text-secondary dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition" href="#">Resources</a></li>
+</ul>
+<button class="md:hidden p-3 text-secondary dark:text-white">
+<span class="material-icons-round">menu</span>
+</button>
+<a class="flex items-center gap-2 bg-[#4CAF50] hover:bg-[#43a047] text-white px-5 py-2.5 rounded-full font-bold text-sm transition shadow-lg ml-auto md:ml-0" href="#">
+                Chat with Us
+                <img alt="WhatsApp" class="w-5 h-5 filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0zAGr93mnl5xi_h8SlDjmlSUD69Rw46wdabKjpvU-H1rZOOGj47I2qkXRgOP74ydS-pE4MKlzjXJLYRIrNToldg9aVXjvgMSJJJMwBAokUVvLGeuyo2gKgCbaiA75VvFSpMDddP7IOSidxhE5a2dh4P_BTmIm9z99FYbIQ8KgelC1zwgvowU94ZcHL9yfetZ7x8tKcSTbGXI4-cRniI3sbr8sgGSne6C-37blvTG0ospkDo-yvR4vaw7Be3iowSbK3SBrp15eABE"/>
+</a>
+</div>
+</div>
+
+</body></html>

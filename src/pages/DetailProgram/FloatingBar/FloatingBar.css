@@ -1,0 +1,108 @@
+.floating-bar {
+  position: fixed;
+  top: 88px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(960px, calc(100% - 64px));
+  z-index: 20;
+}
+
+.floating-bar__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  background: rgba(var(--white-rgb), 0.96);
+  border: 1px solid rgba(var(--primary-blue-rgb), 0.14);
+  box-shadow: 0 20px 40px rgba(var(--black-rgb), 0.12);
+  border-radius: 9999px;
+  padding: 0.9rem 1.1rem;
+  backdrop-filter: blur(12px);
+}
+
+.floating-bar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(var(--primary-blue-rgb), 0.08);
+}
+
+.floating-bar__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 8px;
+  background: var(--primary-navy);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.floating-bar__brand-text {
+  font-weight: 700;
+  color: var(--primary-navy);
+  font-size: 0.9rem;
+}
+
+.floating-bar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0;
+  margin: 0;
+}
+
+.floating-bar__nav li a {
+  display: inline-block;
+  padding: 0.55rem 1rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  background: rgba(var(--white-rgb), 0.9);
+  border: 1px solid transparent;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.floating-bar__nav li a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(var(--primary-blue-rgb), 0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 900px) {
+  .floating-bar {
+    top: 76px;
+  }
+
+  .floating-bar__content {
+    gap: var(--spacing-sm);
+  }
+
+  .floating-bar__nav {
+    gap: 4px;
+  }
+
+  .floating-bar__nav li a {
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-bar {
+    width: calc(100% - 24px);
+    top: 72px;
+  }
+
+  .floating-bar__content {
+    justify-content: center;
+    padding: 0.65rem 0.9rem;
+  }
+
+  .floating-bar__nav {
+    display: none;
+  }
+}

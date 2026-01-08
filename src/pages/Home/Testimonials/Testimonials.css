@@ -1,0 +1,54 @@
+.testimonials {
+  padding: var(--spacing-5xl) 0;
+  background: linear-gradient(180deg,
+      rgba(var(--primary-light-rgb), 1) 0,
+      rgba(var(--primary-light-rgb), 0.4) 50%,
+      rgba(var(--primary-light-rgb), 0.2) 70%,
+      rgba(var(--primary-light-rgb), 0.8) 85%,
+      rgba(var(--primary-light-rgb), 1) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before,
+.testimonials::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonials::before {
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  top: -400px;
+  left: -300px;
+}
+
+.testimonials::after {
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(circle, rgba(30, 85, 177, 0.08) 0%, transparent 70%);
+  bottom: -500px;
+  right: -400px;
+}
+
+.testimonials .container {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials .section-title {
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-xl);
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: var(--spacing-3xl) 0;
+  }
+}

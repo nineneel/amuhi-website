@@ -1,0 +1,227 @@
+.program-curriculum {
+  padding: var(--spacing-4xl) 0;
+  background: var(--white);
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+.curriculum-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-sm);
+}
+
+.curriculum-header p {
+  color: var(--gray-600);
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+.timeline {
+  position: relative;
+  margin-top: var(--spacing-2xl);
+  padding-left: 2.8rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1.2rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--primary-blue-rgb), 0.25) 0%,
+    rgba(var(--primary-blue-rgb), 0.45) 50%,
+    rgba(var(--primary-blue-rgb), 0.25) 100%
+  );
+  border-radius: 999px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: calc(-1.6rem - 6.5px);
+  top: 1rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, var(--primary-navy) 0 48%, var(--primary-light) 55% 100%);
+  box-shadow: 0 0 0 5px rgba(var(--primary-light-rgb), 0.45);
+}
+
+.timeline-card {
+  background: linear-gradient(180deg, rgba(var(--primary-light-rgb), 0.05) 0%, rgba(var(--primary-light-rgb), 0) 100%);
+  border: 1px solid rgba(var(--primary-blue-rgb), 0.12);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-label {
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary-navy);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card p {
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+.curriculum-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.benefits-card {
+  background: var(--white);
+  border: 1px solid rgba(var(--primary-blue-rgb), 0.12);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefits-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--primary-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+.benefits-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.benefits-card li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: var(--spacing-sm);
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(var(--success-rgb), 0.12);
+  color: var(--success);
+}
+
+.syllabus-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, #1b2f8d 50%, var(--primary-blue) 100%);
+  color: var(--white);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.syllabus-card::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.syllabus-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(var(--primary-cyan-rgb), 0.2);
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.syllabus-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.syllabus-card p {
+  color: rgba(var(--white-rgb), 0.85);
+  margin-bottom: var(--spacing-md);
+}
+
+.syllabus-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.4rem;
+  background: var(--primary-light);
+  color: var(--primary-navy);
+  font-weight: 700;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.syllabus-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 1024px) {
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculum-side {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .curriculum-side {
+    flex-direction: column;
+  }
+
+  .timeline {
+    padding-left: 2.6rem;
+  }
+
+  .timeline::before {
+    left: 1.1rem;
+  }
+
+  .timeline-item {
+    padding-left: 2.8rem;
+  }
+
+  .timeline-marker {
+    left: calc(-1.5rem - 6.5px);
+  }
+}
