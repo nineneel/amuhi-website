@@ -101,26 +101,27 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
+      <div className="news-container">
+        <section className="news-section">
+          <div className="news-grid">
+            {filteredArticles.length === 0 && (
+              <div className="news-empty">
+                <p>No news found for that search. Try another keyword or category.</p>
+              </div>
+            )}
 
-      <section className="container news-section">
-        <div className="news-grid">
-          {filteredArticles.length === 0 && (
-            <div className="news-empty">
-              <p>No news found for that search. Try another keyword or category.</p>
-            </div>
-          )}
-
-          {filteredArticles.map((article) => (
-            <NewsCard key={article.id} article={article} />
-          ))}
-        </div>
-      </section>
-
-      <div className="container news-load-more">
-        <button type="button">Load More Articles</button>
+            {filteredArticles.map((article) => (
+              <NewsCard key={article.id} article={article} />
+            ))}
+          </div>
+          <div className="container news-load-more">
+            <button type="button">Load More Articles</button>
+          </div>
+        </section>
       </div>
 
-      <section className="news-subscribe">
+
+      {/* <section className="news-subscribe">
         <div className="container news-subscribe__content">
           <div>
             <p className="news-kicker">Stay Updated</p>
@@ -136,7 +137,7 @@ export default function NewsPage() {
           </form>
           <p className="news-subscribe__note">We respect your privacy. Unsubscribe at any time.</p>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

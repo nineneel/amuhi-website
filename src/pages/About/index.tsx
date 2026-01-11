@@ -2,24 +2,26 @@ import './About.css';
 
 const HERO_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuCIY8XjSnZMQqVbQLwiKfn7lYz04OTG02KweSHz03jal_KqtpxaMyTM6fIK1M-i87CLX_VD6ErpFOZK5GoBk432WW1d4KBtLRmoaIpy8XdxLVvYYNRkCCiCh14XmTRhPlv7ptNXPrsRbb0uK4vAU0bmVn1n8EEZV88Hy9XxtUODlKd8h7DVsIGXW8tILyHkR3Z_aG8H9vJ3_FG2sIAAz7D6whQaaqsqUDn4bQlWXThAlk72EMTYEBFq_kiXggklL1wOzu2Gs6mvb7Y';
 
-const heroHighlights = [
-  { title: 'Certification & Standards', description: 'Setting global benchmarks for quality.' },
-  { title: 'Protection & Integrity', description: 'Verified systems to prevent fraud.' },
-  { title: 'Collaboration Network', description: 'Connecting agencies, suppliers, and regulators.' },
-];
-
 const missionPillars = [
   {
-    title: 'Standardization',
-    description: 'Establishing rigorous benchmarks for service quality and operational excellence.',
+    title: 'Digital Infrastructure',
+    description: 'Membangun digital infrastructure & ecosystem bagi pelaku industri.',
   },
   {
-    title: 'Protection',
-    description: 'Safeguarding pilgrims and businesses with trusted verification systems.',
+    title: 'Smart Learning',
+    description: 'Mengedukasi & melatih anggota melalui smart learning & certification system.',
   },
   {
-    title: 'Collaboration',
-    description: 'Creating a unified network for travel agencies, suppliers, and regulators.',
+    title: 'Digital Networking',
+    description: 'Mendorong kolaborasi antar travel melalui platform digital networking.',
+  },
+  {
+    title: 'Protection & Advocacy',
+    description: 'Menghadirkan perlindungan dan advokasi anggota yang cepat dan kredibel.',
+  },
+  {
+    title: 'Global Partnership',
+    description: 'Menciptakan ruang promosi dan kemitraan global yang saling menguntungkan.',
   },
 ];
 
@@ -98,17 +100,6 @@ export default function AboutPage() {
               Empowering the ecosystem through innovation, certification, and collaboration. We bridge trusted,
               modernized pilgrimage experiences for every stakeholder.
             </p>
-
-            <div className="about-hero__meta">
-              {heroHighlights.map((item) => (
-                <div className="about-hero__meta-item" key={item.title}>
-                  <div>
-                    <p className="about-hero__meta-title">{item.title}</p>
-                    <p className="about-hero__meta-description">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="about-hero__visual">
@@ -139,10 +130,10 @@ export default function AboutPage() {
           </div>
 
           <div className="about-mission__content">
-            <p className="about-kicker">Our Mission</p>
-            <h2 className="about-mission__title">Transforming the industry with four pillars of action.</h2>
+            <p className="about-kicker">Vision & Mission</p>
+            <h2 className="about-mission__title">Menjadi mitra utama dan mendukung penuh program Kementerian Haji dan Umroh</h2>
             <p className="about-mission__description">
-              We are dedicated to ensuring every stakeholder benefits from a trusted, modernized approach, creating safer journeys and stronger partnerships across the ecosystem.
+              Mewujudkan ekosistem Umrah dan Haji yang bebas dari scam, fraud, dan ketidaktransparanan, serta menciptakan pengalaman ibadah yang lebih aman, profesional, dan berdaya saing global. Juga menjadi mitra utama dan mendukung penuh program Kementerian Haji dan Umroh serta mewujudkan ekosistem Umrah dan Haji yang aman, transparan, dan terhubung secara global.
             </p>
 
             <div className="about-mission__pillars">
@@ -212,7 +203,6 @@ export default function AboutPage() {
           </div>
           <div className="about-cta__actions">
             <a className="btn btn-primary" href="/#programs">Explore Programs</a>
-            <a className="btn btn-secondary" href="mailto:hello@amuhi.id">Contact Support</a>
           </div>
         </div>
       </section>
