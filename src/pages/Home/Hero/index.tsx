@@ -24,6 +24,10 @@ export default function Hero() {
                 <img src="/hero-bg.jpg" alt="AMUHI Team" />
             </div>
 
+            <div className="hero-logo">
+                <img src="/logo.png" alt="AMUHI Logo" />
+            </div>
+
             <div className="hero-container">
                 <div className="hero-content">
                     <h1 className="hero-title">

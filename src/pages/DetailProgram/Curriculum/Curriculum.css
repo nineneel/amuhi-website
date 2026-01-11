@@ -66,7 +66,7 @@
   background: linear-gradient(180deg, rgba(var(--primary-light-rgb), 0.05) 0%, rgba(var(--primary-light-rgb), 0) 100%);
   border: 1px solid rgba(var(--primary-blue-rgb), 0.12);
   border-radius: var(--radius-2xl);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   box-shadow: var(--shadow-sm);
 }
 
@@ -131,9 +131,14 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  border-radius: 10px;
+  border-radius: 50%;
   background: rgba(var(--success-rgb), 0.12);
   color: var(--success);
+}
+
+.benefit-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .syllabus-card {
@@ -160,11 +165,16 @@
 .syllabus-icon {
   width: 52px;
   height: 52px;
-  border-radius: 16px;
+  border-radius: 50%;
   background: rgba(var(--primary-cyan-rgb), 0.2);
   display: grid;
   place-items: center;
   margin-bottom: var(--spacing-md);
+}
+
+.syllabus-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .syllabus-card h4 {
@@ -218,10 +228,10 @@
   }
 
   .timeline-item {
-    padding-left: 2.8rem;
+    padding-left: 2rem;
   }
 
   .timeline-marker {
-    left: calc(-1.5rem - 6.5px);
+    left: calc(-0.9rem - 16px);
   }
 }

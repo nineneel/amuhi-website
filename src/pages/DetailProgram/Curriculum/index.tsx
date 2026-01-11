@@ -1,5 +1,5 @@
 import type { ProgramCurriculum } from '../../../types/program';
-import { CheckIcon, DownloadIcon } from '../icons';
+import { DownloadIcon } from '../icons';
 import './Curriculum.css';
 
 type CurriculumProps = {
@@ -36,7 +36,7 @@ const defaultCurriculum: ProgramCurriculum = {
 
 export default function Curriculum({ curriculum }: CurriculumProps) {
   const pillars = curriculum?.pillars?.length ? curriculum.pillars : defaultCurriculum.pillars;
-  const benefits = curriculum?.benefits?.length ? curriculum.benefits : defaultCurriculum.benefits;
+  // const benefits = curriculum?.benefits?.length ? curriculum.benefits : defaultCurriculum.benefits;
   const title = curriculum?.title ?? defaultCurriculum.title ?? 'Program Pillars';
   const description = curriculum?.description ?? defaultCurriculum.description;
   const syllabusUrl = curriculum?.syllabusUrl;
@@ -65,7 +65,7 @@ export default function Curriculum({ curriculum }: CurriculumProps) {
         </div>
 
         <div className="curriculum-side">
-          <div className="benefits-card">
+          {/* <div className="benefits-card">
             <h3>What you&apos;ll get</h3>
             <ul>
               {benefits.map((item) => (
@@ -77,7 +77,7 @@ export default function Curriculum({ curriculum }: CurriculumProps) {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           <div className="syllabus-card">
             <div className="syllabus-icon" aria-hidden="true">

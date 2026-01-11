@@ -56,11 +56,16 @@
 .registration-feature-icon {
   width: 52px;
   height: 52px;
-  border-radius: var(--radius-xl);
+  border-radius: 50%;
   background: rgba(var(--primary-light-rgb), 0.25);
   display: grid;
   place-items: center;
   color: var(--primary-navy);
+}
+
+.registration-feature-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .registration-feature h4 {

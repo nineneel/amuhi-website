@@ -51,4 +51,8 @@
   .testimonials {
     padding: var(--spacing-3xl) 0;
   }
+
+  .testimonials .section-title {
+    font-size: 1.5rem;
+  }
 }

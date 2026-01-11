@@ -30,6 +30,19 @@
   padding-bottom: var(--spacing-2xl);
 }
 
+.footer-address-cover {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 250px;
+  height: 80px;
+  object-fit: cover; 
+  margin-bottom: var(--spacing-lg);
+  display: block;
+}
+
 .footer-label {
   font-size: 1rem;
   font-weight: 700;
@@ -142,6 +155,10 @@
 
   .footer-brand {
     grid-column: span 1;
+  }
+
+  .footer-logo {
+    width: 180px;
   }
 
   .footer-bottom {

@@ -184,3 +184,10 @@
     font-size: 3.5rem;
   }
 }
+
+@media (max-width: 640px) {
+  .organization .section-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}

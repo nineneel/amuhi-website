@@ -43,9 +43,6 @@ export default function Hero({ program }: HeroProps) {
             <a className="btn btn-primary detail-hero__primary" href="#register">
               Register Now
             </a>
-            <a className="btn btn-secondary detail-hero__secondary" href="#curriculum">
-              Preview
-            </a>
           </div>
 
           <div className="detail-hero__meta">

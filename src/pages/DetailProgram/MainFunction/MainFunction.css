@@ -1,16 +1,17 @@
 .program-main-function {
   padding: var(--spacing-3xl) 0;
+  background: #fff;
 }
 
 .main-function-card {
-  background: #fff;
-  border-radius: 24px;
-  padding: var(--spacing-xl);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-xl);
   align-items: center;
-  box-shadow: 0 16px 50px rgba(14, 28, 64, 0.08);
+  box-shadow: none;
 }
 
 .main-function-media {
@@ -101,5 +102,11 @@
     position: static;
     margin-top: var(--spacing-sm);
     max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-function-card {
+    padding: 0 var(--spacing-md);
   }
 }

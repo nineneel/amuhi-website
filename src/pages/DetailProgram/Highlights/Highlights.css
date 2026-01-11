@@ -31,6 +31,11 @@
   box-shadow: 0 12px 25px rgba(var(--primary-light-rgb), 0.4);
 }
 
+.highlight-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
 .highlight-card h3 {
   font-family: var(--font-heading);
   font-size: 1.25rem;
@@ -54,6 +59,19 @@
   }
 
   .highlights-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .highlight-card {
+    padding: var(--spacing-md);
+  }
+
+  .highlight-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .highlight-card p {
+    font-size: 0.85rem;
   }
 }
