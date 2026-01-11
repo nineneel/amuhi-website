@@ -5,14 +5,15 @@
 
 
 /* Wave Background for Content Sections */
-/* .content-sections {
-  position: relative;
-  background: linear-gradient(180deg, rgba(30, 85, 177, 0.05) 0%, rgba(140, 226, 249, 0.1) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y;
-  padding-bottom: var(--spacing-3xl);
-} */
+.content-sections {
+  /* position: relative;
+  padding-bottom: var(--spacing-3xl); */
+  /* background: url('/bg-wave-2.png') top center/100% auto repeat-y; */
+  background: linear-gradient(180deg, rgba(var(--white-rgb), 0.7) 0, rgba(var(--white-rgb), 0.4) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y; 
+}
 
 /* Ensure sections inside are transparent */
-/* .content-sections .section {
+/* .content-sections .section {c
   background: linear-gradient(
     180deg, 
     rgba(var(--primary-light-rgb), 1) 0,

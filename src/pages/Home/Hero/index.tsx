@@ -1,17 +1,21 @@
+import { useState } from 'react';
 import LeadForm, { type LeadFormData } from '../../../components/common/LeadForm';
 import './Hero.css';
 
 const stats = [
-    <>Verified by <strong>AMUHI Badge</strong></>,
-    <>Access to <strong>AMUHI Academy</strong></>,
-    <><strong>Network & Collaboration</strong> Access</>,
-    <><strong>Visibility Boost</strong></>,
-    <><strong>Protection & Support System</strong></>,
+    { line1: 'Verified by', line2: 'AMUHI Badge' },
+    { line1: 'Access to', line2: 'AMUHI Academy' },
+    { line1: 'Network &', line2: 'Collaboration Access' },
+    { line1: 'Visibility', line2: 'Boost' },
+    { line1: 'Protection &', line2: 'Support System' },
 ];
 
 export default function Hero() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const handleSubmit = (payload: LeadFormData) => {
         console.log('Form submitted:', payload);
+        setIsModalOpen(false);
     };
 
     return (
@@ -26,6 +30,25 @@ export default function Hero() {
                         <span>Building</span>
                         <span>Better Future</span>
                     </h1>
+                    <button
+                        className="hero-cta-button"
+                        onClick={() => setIsModalOpen(true)}
+                    >
+                        Get Started
+                    </button>
+                </div>
+
+                {/* Stats bar */}
+                <div className="hero-stats">
+                    <div className="stats-track">
+                        {/* Render stats twice for seamless loop */}
+                        {[...stats, ...stats].map((stat, index) => (
+                            <div key={index} className="stat-text">
+                                <div className="stat-line-1">{stat.line1}</div>
+                                <div className="stat-line-2">{stat.line2}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="hero-form-wrapper">
@@ -37,12 +60,24 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* Stats bar at bottom */}
-            <div className="hero-stats">
-                {stats.map((text, index) => (
-                    <span key={index} className="stat-text">{text}</span>
-                ))}
-            </div>
+            {/* Modal for mobile */}
+            {isModalOpen && (
+                <div className="hero-modal-overlay" onClick={() => setIsModalOpen(false)}>
+                    <div className="hero-modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button
+                            className="hero-modal-close"
+                            onClick={() => setIsModalOpen(false)}
+                        >
+                            ×
+                        </button>
+                        <LeadForm
+                            title="Let us know better by filling out this form"
+                            buttonText="Submit"
+                            onSubmit={handleSubmit}
+                        />
+                    </div>
+                </div>
+            )}
         </section>
     );
 }

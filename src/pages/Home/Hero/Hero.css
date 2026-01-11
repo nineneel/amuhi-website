@@ -37,12 +37,21 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 1.8fr 1fr;
+  grid-template-areas: "content form";
   gap: 60px;
   align-items: center;
   width: 100%;
   max-width: var(--container-hero);
   margin: 0 auto;
   padding: var(--spacing-5xl) var(--spacing-3xl) 200px;
+}
+
+.hero-content {
+  grid-area: content;
+}
+
+.hero-form-wrapper {
+  grid-area: form;
 }
 
 .hero-content {
@@ -67,34 +76,49 @@
   background-clip: text;
 }
 
-/* Stats Bar - Fixed at bottom */
-/* Stats Bar - moved to .hero-stats directly */
-
+/* Stats Bar - Fixed at bottom for desktop */
 .hero-stats {
-  position: absolute;
-  bottom: 10%;
-  left: 0;
-  right: 0;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px; /* reduced gap */
+  gap: 32px;
   width: 100%;
   padding: 32px 24px;
   background: transparent;
+  grid-column: 1 / -1; /* Span all columns */
+}
+
+.stats-track {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .stat-text {
   font-family: var(--font-heading);
-  font-size: 1.2rem; 
-  font-weight: 400;
   color: var(--primary-navy);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.stat-text strong {
-  font-weight: 800;
+.stat-line-1 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.stat-line-2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Hide duplicate stats on desktop (only show first 5) */
+.stat-text:nth-child(n+6) {
+  display: none;
 }
 
 /* Hero Form */
@@ -103,22 +127,92 @@
   width: 100%;
 }
 
+/* CTA Button */
+.hero-cta-button {
+  display: none;
+  padding: 12px 40px;
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  background: var(--primary-cyan);
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 24px;
+}
 
+.hero-cta-button:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(140, 226, 249, 0.4);
+}
+
+/* Modal Styles */
+.hero-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-modal-content {
+  position: relative;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 24px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.hero-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--gray-600);
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.hero-modal-close:hover {
+  color: var(--black);
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
   .hero-container {
     grid-template-columns: 1fr;
-    padding: 100px 24px 220px;
+    padding: 100px 24px 200px;
     gap: 40px;
   }
-  
+
   .hero-stats {
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 20px;
     padding: 20px 24px;
+    bottom: 5%;
   }
-  
+
+  .stat-text {
+    font-size: 1rem;
+  }
+
   .stat-item {
     flex: 1;
     min-width: 100px;
@@ -127,22 +221,100 @@
 
 @media (max-width: 640px) {
   .hero-container {
-    padding: 80px 20px 200px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* min-height: 100vh; */
   }
-  
+
+  .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    order: 1;
+    padding: 20% 20px 0;
+  }
+
   .hero-title {
-    font-size: 2rem;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 24px;
   }
-  
+
+  /* Show CTA button on mobile */
+  .hero-cta-button {
+    display: inline-block;
+  }
+
+  /* Hide form on mobile */
+  .hero-form-wrapper {
+    display: none;
+  }
+
+  /* Show modal on mobile */
+  .hero-modal-overlay {
+    display: flex;
+  }
+
   .hero-stats {
-    gap: 16px;
-    padding: 16px 20px;
+    padding: 10% 0 0 0;
+    order: 2;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
   }
-  
+
+  .stats-track {
+    display: flex;
+    gap: 32px;
+    animation: scroll-horizontal 20s linear infinite;
+    width: max-content;
+  }
+
+  /* Pause animation on hover/touch */
+  .stats-track:hover {
+    animation-play-state: paused;
+  }
+
+  .stat-text {
+    text-align: left;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: flex; /* Show all stats on mobile for scrolling */
+    gap: 2px;
+  }
+
+  .stat-line-1 {
+    font-size: 1rem;
+  }
+
+  .stat-line-2 {
+    font-size: 1.5rem;
+  }
+
+  .stat-text:nth-child(n+6) {
+    display: flex; /* Override desktop hiding */
+  }
+
+  /* Keyframe animation for horizontal scroll */
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
   .stat-value {
     font-size: 1.25rem;
   }
-  
+
   .stat-label {
     font-size: 0.65rem;
   }
