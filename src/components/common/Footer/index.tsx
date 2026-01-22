@@ -26,20 +26,17 @@ export default function Footer() {
                     <div className="footer-brand">
                         <div className="footer-address-cover">
                             <img src="/logo.png" alt="AMUHI Logo" className="footer-logo" />
-                            <h4 className="footer-label">Address:</h4>
-                            <p className="brand-subtitle">Kantor Pusat Amuhi:</p>
+                            <h4 className="footer-label">ASOSIASI MILENIAL UMROH HAJI INDONESIA</h4>
+                            <p className="brand-subtitle">Address:</p>
                             <address className="footer-address">
-                                Kota Kasablanka, Prudential Centre, Lantai 7,<br />
-                                Jl. Casablanca Raya Kav No.88 , Jakarta Selatan.
+                                Kasablanca Office Tower A, Lantain 18, Unit A-H <br />
+                                Jl. Casablanca Raya Kav No.88, Jakarta Selatan, DKI Jakarta
                             </address>
                         </div>
 
                         <div className="footer-contact">
-                            <div className="footer-contact-item">
-                                <span>Panitia: 021-38825167</span>
-                            </div>
-                            <a href="mailto:milenialumrahhaji@gmail.com" className="footer-contact-item">
-                                <span>Email : milenialumrahhaji@gmail.com</span>
+                            <a href="mailto:better@amuhi.id" className="footer-contact-item">
+                                <span>Email : better@amuhi.id</span>
                             </a>
                             <a href="https://instagram.com/amuhi.id" className="footer-contact-item" target="_blank" rel="noopener noreferrer">
                                 <span>Instagram: @amuhi.id</span>
@@ -70,7 +67,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© 2026 AMUHI. All rights reserved.</p>
+                    <p>© 2026 AMUHI - Asosiasi Milenial Umroh Haji Indonesia. All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>

@@ -2,16 +2,16 @@ import TestimonialCarousel from '../../../components/common/TestimonialCarousel'
 import './Testimonials.css';
 
 const testimonials = [
-    {
-        text: 'Asosiasi yang istimewa Memberikan arah perubahan yang signicant haji dan umrah masa depan',
-        name: 'Mochamad Irfan Yusuf',
-        role: 'Menteri Haji & Umrah Republik Indonesia',
-    },
-    {
-        text: 'Bukan sekedar asosiasi, ini adalah sebuah movement masa depan Haji dan Umrah',
-        name: 'Dahnil Simanjuntak',
-        role: 'Wakil Menteri Haji & Umrah Republik Indonesia',
-    },
+    // {
+    //     text: 'Asosiasi yang istimewa Memberikan arah perubahan yang signicant haji dan umrah masa depan',
+    //     name: 'Mochamad Irfan Yusuf',
+    //     role: 'Menteri Haji & Umrah Republik Indonesia',
+    // },
+    // {
+    //     text: 'Bukan sekedar asosiasi, ini adalah sebuah movement masa depan Haji dan Umrah',
+    //     name: 'Dahnil Simanjuntak',
+    //     role: 'Wakil Menteri Haji & Umrah Republik Indonesia',
+    // },
     {
         text: 'Inilah asosiasi yang modern, profesional, transparent dan terpercaya',
         name: 'Siti Husniaty S. Sos. I',
