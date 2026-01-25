@@ -60,10 +60,6 @@ export default function Hero({ program }: HeroProps) {
         <div className="detail-hero__visual">
           <div className="detail-hero__image-wrapper">
             <img src={heroImage} alt={`${program.name} preview`} loading="lazy" />
-            <div className="detail-hero__image-overlay">
-              <p className="detail-hero__overlay-title">Next Cohort Starts: Oct 25th</p>
-              <p className="detail-hero__overlay-subtitle">Limited seats available</p>
-            </div>
           </div>
           <div className="detail-hero__shadow" aria-hidden="true" />
         </div>

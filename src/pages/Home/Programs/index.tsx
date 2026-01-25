@@ -22,6 +22,11 @@ export default function Programs() {
                                     <span>{program.slug.charAt(0).toUpperCase() + program.slug.slice(1)}</span>
                                 </h3>
                             </div>
+                            {program.heroImage && (
+                                <div className="program-image">
+                                    <img src={program.heroImage} alt={`${program.name} preview`} />
+                                </div>
+                            )}
                             <p className="program-description">{program.shortDescription}</p>
                             <div className="program-divider" />
                             <ul className="program-points">
