@@ -4,25 +4,6 @@
 
 
 
-/* Wave Background for Content Sections */
-.content-sections {
-  /* position: relative;
-  padding-bottom: var(--spacing-3xl); */
-  /* background: url('/bg-wave-2.png') top center/100% auto repeat-y; */
-  background: linear-gradient(180deg, rgba(var(--white-rgb), 0.7) 0, rgba(var(--white-rgb), 0.4) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y; 
-}
-
-/* Ensure sections inside are transparent */
-/* .content-sections .section {c
-  background: linear-gradient(
-    180deg, 
-    rgba(var(--primary-light-rgb), 1) 0,
-    rgba(var(--primary-light-rgb), 0.5) 50%, 
-    rgba(var(--primary-light-rgb), 0) 70%, 
-    rgba(var(--primary-light-rgb), 1) 100%
-  ) !important; 
-} */
-
 /* Import Google Fonts - must be first */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
@@ -197,6 +178,25 @@ input, textarea, select {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+/* Wave Background for Content Sections */
+.content-sections {
+  /* position: relative;
+  padding-bottom: var(--spacing-3xl); */
+  /* background: url('/bg-wave-2.png') top center/100% auto repeat-y; */
+  background: linear-gradient(180deg, rgba(var(--white-rgb), 0.7) 0, rgba(var(--white-rgb), 0.4) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y;
+}
+
+/* Ensure sections inside are transparent */
+/* .content-sections .section {c
+  background: linear-gradient(
+    180deg,
+    rgba(var(--primary-light-rgb), 1) 0,
+    rgba(var(--primary-light-rgb), 0.5) 50%,
+    rgba(var(--primary-light-rgb), 0) 70%,
+    rgba(var(--primary-light-rgb), 1) 100%
+  ) !important;
+} */
 
 /* Buttons */
 .btn {
