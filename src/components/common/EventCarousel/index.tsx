@@ -49,9 +49,9 @@ export default function EventCarousel({ events }: EventCarouselProps) {
                   </a>
                 )}
                 {event.isCommingSoon && (
-                  <a href="#" className="event-cta event-cta-secondary">
+                  <div className="event-cta event-cta-secondary">
                     Comming Soon
-                  </a>
+                  </div>
                 )}
               </div>
             </article>

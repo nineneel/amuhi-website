@@ -13,7 +13,7 @@ const heroSlides = [
     {
         image: hero1,
         title: ['Building', 'Better Future'],
-        description: 'Bergabunglah bersama AMUHI untuk membangun ekosistem Haji & Umrah yang modern, transparan, dan terpercaya.',
+        description: '“We’re not just an association — we’re a movement shaping the future of Umrah & Hajj.”',
     },
     {
         image: hero2,

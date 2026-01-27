@@ -134,6 +134,10 @@
   box-shadow: var(--shadow-lg);
 }
 
+.event-cta:hover {
+  transform: none;
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .events-section .section-title {

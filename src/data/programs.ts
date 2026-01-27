@@ -16,7 +16,8 @@ import networkHero from '../assets/programs/images/Network-1.webp';
 import digitalHero from '../assets/programs/images/Digital-1.webp';
 
 // Main images (Program-2.webp)
-import academicMain from '../assets/programs/images/Academic-2.webp';
+// import academicMain from '../assets/programs/images/Academic-2.webp';
+import academicMain2 from '../assets/events/kempinski.jpeg';
 import checkMain from '../assets/programs/images/Check-2.webp';
 import protectMain from '../assets/programs/images/Protect-2.webp';
 import careMain from '../assets/programs/images/Care-2.webp';
@@ -33,9 +34,10 @@ export const programs: ProgramData[] = [
     longDescription: 'AMUHI Academy adalah wadah pengembangan kompetensi industri ibadah berbasis digital. Melalui sistem pelatihan modern (online & onsite), workshop, dan sertifikasi kompetensi, unit ini membantu anggota meningkatkan profesionalisme, literasi teknologi, serta standar pelayanan sesuai regulasi terbaru.',
     icon: academyIcon,
     heroImage: academicHero,
+    heroBadge: 'Education & Certification',
     detail: {
       mainFunction: 'Menjadi pusat edukasi, pelatihan, dan sertifikasi profesional bagi para pelaku industri Umrah & Haji — mulai dari staf operasional hingga pemilik travel.',
-      mainImage: academicMain,
+      mainImage: academicMain2,
       valueCreated: [
         'Meningkatkan kapasitas dan kredibilitas SDM pelaku industri.',
         'Membangun standardisasi kompetensi nasional.',
@@ -158,6 +160,7 @@ export const programs: ProgramData[] = [
     longDescription: 'AMUHI Check adalah sistem berbasis teknologi yang dirancang untuk membangun transparansi industri. Setiap anggota yang terdaftar dapat diverifikasi secara real-time melalui portal atau aplikasi AMUHI. Sistem ini membantu publik membedakan travel resmi dari yang tidak terdaftar, sekaligus menjaga kepercayaan terhadap asosiasi dan anggotanya.',
     icon: checkIcon,
     heroImage: checkHero,
+    heroBadge: 'Verification & Compliance',
     ctaTitle: 'Siap Bergabung dengan AMUHI Check?',
     detail: {
       mainFunction: 'Menyediakan sistem verifikasi digital bagi travel anggota untuk memastikan keabsahan izin, legalitas, dan kredibilitas perusahaan.',
@@ -284,6 +287,7 @@ export const programs: ProgramData[] = [
     longDescription: 'AMUHI Protect bertugas sebagai "tameng digital" asosiasi. Dengan sistem pelaporan cepat, mekanisme advokasi hukum, dan monitoring digital, AMUHI Protect memastikan anggota terhindar dari kerugian akibat oknum tidak bertanggung jawab. Selain itu, unit ini juga mengedukasi publik tentang cara beribadah dengan aman dan terverifikasi.',
     icon: protectIcon,
     heroImage: protectHero,
+    heroBadge: 'Member Protection',
     detail: {
       mainFunction: 'Menjadi sistem perlindungan dan advokasi bagi anggota serta jamaah dari ancaman penipuan (scam) dan fraud di industri Umrah & Haji.',
       mainImage: protectMain,
@@ -409,6 +413,7 @@ export const programs: ProgramData[] = [
     longDescription: 'AMUHI Care fokus pada kegiatan berbasis nilai Islami seperti bantuan jamaah, program sosial untuk masyarakat terdampak, serta kampanye edukatif mengenai ibadah yang aman. Selain itu, unit ini menjadi jembatan advokasi antara jamaah, travel, dan regulator — terutama ketika terjadi kasus sosial, hukum, atau moral di lapangan.',
     icon: careIcon,
     heroImage: careHero,
+    heroBadge: 'Social Impact',
     detail: {
       mainFunction: 'Menjadi divisi sosial dan advokasi yang memperkuat peran kemanusiaan dan tanggung jawab sosial AMUHI di tengah masyarakat.',
       mainImage: careMain,
@@ -534,6 +539,7 @@ export const programs: ProgramData[] = [
     longDescription: 'AMUHI Network berfungsi layaknya "LinkedIn"-nya pelaku industri Umrah & Haji. Unit ini mempertemukan para owner, supplier, maskapai, hotel, dan penyedia jasa pendukung lainnya dalam satu ruang digital terintegrasi. Tujuannya: menciptakan kolaborasi lintas sektor yang saling menguntungkan dan mempercepat pertumbuhan industri secara kolektif.',
     icon: networkIcon,
     heroImage: networkHero,
+    heroBadge: 'Business Network',
     detail: {
       mainFunction: 'Menjadi wadah koneksi, kolaborasi, dan pertukaran peluang bisnis antar pelaku industri Umrah & Haji — baik nasional maupun internasional.',
       mainImage: networkMain,
@@ -659,6 +665,7 @@ export const programs: ProgramData[] = [
     longDescription: 'AMUHI Digital adalah "wajah publik" asosiasi. Unit ini mengelola AMUHI News Update, AMUHI Podcast, AMUHI Social Media, dan AMUHI Apps, yang berfungsi untuk memperkuat narasi, membangun awareness, serta menyebarkan insight industri Umrah & Haji yang aman. Selain itu, AMUHI Digital menjadi ruang bagi sponsor dan mitra untuk melakukan kolaborasi kampanye dan co-branding.',
     icon: digitalIcon,
     heroImage: digitalHero,
+    heroBadge: 'Media & Tech',
     detail: {
       mainFunction: 'Menjadi pusat komunikasi digital, branding, dan engagement publik melalui berbagai kanal media dan aplikasi AMUHI.',
       mainImage: digitalMain,

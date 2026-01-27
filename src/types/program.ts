@@ -89,6 +89,7 @@ export interface ProgramData {
   longDescription: string;
   icon: string;
   heroImage?: string;
+  heroBadge?: string;
   ctaTitle?: string;
   detail?: ProgramDetail;
 

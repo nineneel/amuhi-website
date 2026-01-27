@@ -10,6 +10,7 @@ const DEFAULT_HERO_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXu
 
 export default function Hero({ program }: HeroProps) {
   const heroImage = program.heroImage ?? DEFAULT_HERO_IMAGE;
+  const badgeLabel = program.heroBadge ?? 'Education & Certification';
 
   const metaItems = [
     { label: 'Official Certification', icon: <CheckIcon /> },
@@ -27,7 +28,7 @@ export default function Hero({ program }: HeroProps) {
             <span className="detail-hero__badge-icon" aria-hidden="true">
               <BookIcon />
             </span>
-            <span>Education & Certification</span>
+            <span>{badgeLabel}</span>
           </div>
 
           <h1 className="detail-hero__title">
