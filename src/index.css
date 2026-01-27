@@ -66,6 +66,8 @@
   --spacing-3xl: 4rem;
   --spacing-4xl: 5rem; /* 80px */
   --spacing-5xl: 7.5rem; /* 120px */
+  --spacing-6xl: 9rem;
+  --spacing-7xl: 12rem;
   
   /* Base sizing */
   --container-hero: 1400px;

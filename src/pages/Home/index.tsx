@@ -1,4 +1,5 @@
 import Hero from './Hero'
+import WhatIsAmuhi from './WhatIsAmuhi'
 import Programs from './Programs'
 import Events from './Events'
 // import Organization from './Organization'
@@ -9,9 +10,9 @@ export default function HomePage() {
         <>
             <Hero />
             <div className="content-sections">
+                <WhatIsAmuhi />
                 <Programs />
                 <Events />
-                {/* <Organization /> */}
                 <Testimonials />
             </div>
         </>
