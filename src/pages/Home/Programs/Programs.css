@@ -4,10 +4,10 @@
   background: linear-gradient(
     180deg,
     rgba(var(--primary-light-rgb), 1) 0%,
-    rgba(var(--primary-light-rgb), 0.85) 5%,
-    rgba(var(--primary-light-rgb), 0.6) 15%,
-    rgba(var(--white-rgb), 0.2) 60%,
-    rgba(var(--white-rgb), 0) 100%
+    rgba(var(--primary-light-rgb), 0.80) 5%,
+    rgba(var(--primary-light-rgb), 0.4) 15%,
+    rgba(var(--primary-light-rgb), 0.1) 80%,
+    rgba(var(--primary-light-rgb), 1) 100%
   );
     /* background: linear-gradient(180deg, rgba(var(--white-rgb), 1) 0, rgba(var(--white-rgb), 0.6) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y; */
     /* background: linear-gradient(180deg, rgba(var(--white-rgb), 1) 0, rgba(var(--white-rgb), 0.6) 100%); */
