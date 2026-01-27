@@ -45,8 +45,25 @@
     padding: var(--spacing-md) 0;
   }
 
+  .breadcrumb-list {
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .breadcrumb-item {
+    min-width: 0; /* allow ellipsis to shrink correctly */
+  }
+
   .breadcrumb-link,
   .breadcrumb-current {
     font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .breadcrumb-item:last-child .breadcrumb-current {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 72vw;
   }
 }

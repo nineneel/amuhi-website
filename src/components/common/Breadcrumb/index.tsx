@@ -13,7 +13,6 @@ interface BreadcrumbProps {
 export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav className="breadcrumb" aria-label="Breadcrumb">
-      <div className="container">
         <ol className="breadcrumb-list">
           {items.map((item, index) => (
             <li key={index} className="breadcrumb-item">
@@ -40,7 +39,6 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             </li>
           ))}
         </ol>
-      </div>
     </nav>
   );
 }

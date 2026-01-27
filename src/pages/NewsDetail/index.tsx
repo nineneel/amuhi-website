@@ -1,7 +1,7 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import SEO from '../../components/common/SEO';
 import Breadcrumb from '../../components/common/Breadcrumb';
-import { getNewsArticleBySlug } from '../../data/news';
+import { getNewsArticleBySlug, getRelatedArticles } from '../../data/news';
 import type { NewsArticle, NewsContentBlock } from '../../types/news';
 import '../News/NewsPage.css';
 import './NewsDetail.css';
@@ -151,6 +151,7 @@ export default function NewsDetail() {
   }
 
   const content = article.content ?? [{ type: 'paragraph', text: article.summary }];
+  const related = getRelatedArticles(article, 3);
   const shareUrl =
     typeof window !== 'undefined'
       ? new URL(`/news/${article.slug}`, window.location.origin).toString()
@@ -219,17 +220,15 @@ export default function NewsDetail() {
           tags: article.tags,
         }}
       />
-      <div className="container">
+
+      <article className="container news-detail__article">
         <Breadcrumb
           items={[
-            { label: 'Home', path: '/' },
+            // { label: 'Home', path: '/' },
             { label: 'News', path: '/news' },
             { label: article.title },
           ]}
         />
-      </div>
-
-      <article className="container news-detail__article">
         <header className="news-detail__header">
           {article.badge && <span className="news-detail__badge">{article.badge}</span>}
           <h1>{article.title}</h1>
@@ -292,6 +291,36 @@ export default function NewsDetail() {
             </span>
           ))}
         </div>
+
+        {related.length > 0 && (
+          <section className="related-news" aria-label="Berita terkait">
+            <div className="related-news__header">
+              <div>
+                <p className="news-kicker">Artikel Terkait</p>
+                {/* <h2>Berita lain yang relevan</h2> */}
+              </div>
+              <Link className="related-news__see-all" to="/news">
+                Lihat semua berita →
+              </Link>
+            </div>
+            <div className="related-news__grid">
+              {related.map((item) => (
+                <Link key={item.id} to={`/news/${item.slug}`} className="related-news__card">
+                  <div className="related-news__image">
+                    <img src={item.coverImage} alt={item.title} loading="lazy" />
+                  </div>
+                  <div className="related-news__body">
+                    <p className="related-news__meta">
+                      {item.category} · {formatDate(item.publishedAt)}
+                    </p>
+                    <h3 className="related-news__title">{item.title}</h3>
+                    <p className="related-news__summary">{item.summary}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </article>
 
     </div>
