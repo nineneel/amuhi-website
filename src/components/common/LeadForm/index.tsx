@@ -17,6 +17,7 @@ type LeadFormProps = {
   buttonText?: string;
   placeholders?: Partial<Record<'fullName' | 'phoneNumber' | 'travelName' | 'idNumber', string>>;
   onSubmit?: (data: LeadFormData) => void;
+  onLogin?: () => void;
 };
 
 export default function LeadForm({
@@ -27,6 +28,7 @@ export default function LeadForm({
   buttonText = 'Submit',
   placeholders,
   onSubmit,
+  onLogin,
 }: LeadFormProps) {
   const [role, setRole] = useState<'owner' | 'management'>('owner');
   const [formData, setFormData] = useState({
@@ -128,6 +130,13 @@ export default function LeadForm({
         <button type="submit" className="lead-form__submit">
           {buttonText}
         </button>
+
+        <div className="lead-form__post-submit">
+          <span className="lead-form__already">Sudah mendaftar?</span>
+          <button type="button" className="lead-form__login" onClick={onLogin}>
+            Login
+          </button>
+        </div>
       </form>
     </div>
   );
