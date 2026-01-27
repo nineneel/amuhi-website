@@ -1,4 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom';
+import SEO from '../../components/common/SEO';
 import { getProgramBySlug } from '../../data/programs';
 import Hero from './Hero';
 import Highlights from './Highlights';
@@ -19,6 +20,12 @@ export default function DetailProgram() {
 
   return (
     <div className="detail-program">
+      <SEO
+        title={`${program.name} - ${program.tagline}`}
+        description={program.shortDescription}
+        image={program.heroImage}
+        url={`/programs/${program.slug}`}
+      />
       <Hero program={program} />
       <Highlights highlights={program.detail?.highlights} />
       <ValueCreated program={program} />

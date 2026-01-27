@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../../components/common/SEO';
 import { newsArticles } from '../../data/news';
 import type { NewsArticle } from '../../types/news';
 import './NewsPage.css';
@@ -68,6 +69,11 @@ export default function NewsPage() {
   if (!featuredArticle) {
     return (
       <div className="news-page">
+        <SEO
+          title="Berita & Insight"
+          description="Dapatkan update terbaru tentang industri Umrah dan Haji, regulasi, dan berita dari komunitas AMUHI."
+          url="/news"
+        />
         <section className="container news-empty news-empty--page">
           <p>No news available yet. Please check back soon.</p>
         </section>
@@ -77,6 +83,12 @@ export default function NewsPage() {
 
   return (
     <div className="news-page">
+      <SEO
+        title="Berita & Insight"
+        description="Dapatkan update terbaru tentang industri Umrah dan Haji, regulasi, dan berita dari komunitas AMUHI."
+        image={featuredArticle.coverImage}
+        url="/news"
+      />
       <section className="news-hero">
         <div className="news-hero__accent news-hero__accent--right" aria-hidden="true" />
         <div className="news-hero__accent news-hero__accent--left" aria-hidden="true" />

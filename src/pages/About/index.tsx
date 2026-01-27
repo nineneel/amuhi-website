@@ -1,4 +1,5 @@
 import './About.css';
+import SEO from '../../components/common/SEO';
 import HERO_IMAGE from '../../assets/hero-image/about-us.jpeg';
 import KEMPINSKI_IMAGE from '../../assets/events/kempinski.jpeg';
 import WhatIsAmuhi from '../Home/WhatIsAmuhi';
@@ -83,6 +84,12 @@ const brandIdentity = [
 export default function AboutPage() {
   return (
     <div className="about-page">
+      <SEO
+        title="Tentang AMUHI"
+        description="AMUHI - Asosiasi Milenial Umroh Haji Indonesia. Mewujudkan ekosistem Umrah dan Haji yang bebas dari scam, fraud, dan ketidaktransparanan."
+        image={HERO_IMAGE}
+        url="/about"
+      />
       <section
         className="about-hero"
         id="about"

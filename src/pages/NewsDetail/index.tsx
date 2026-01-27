@@ -1,4 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom';
+import SEO from '../../components/common/SEO';
 import Breadcrumb from '../../components/common/Breadcrumb';
 import { getNewsArticleBySlug } from '../../data/news';
 import type { NewsArticle, NewsContentBlock } from '../../types/news';
@@ -205,6 +206,19 @@ export default function NewsDetail() {
 
   return (
     <div className="news-detail">
+      <SEO
+        title={article.title}
+        description={article.summary}
+        image={article.coverImage}
+        url={`/news/${article.slug}`}
+        type="article"
+        article={{
+          publishedTime: article.publishedAt,
+          author: article.author?.name,
+          section: article.category,
+          tags: article.tags,
+        }}
+      />
       <div className="container">
         <Breadcrumb
           items={[
