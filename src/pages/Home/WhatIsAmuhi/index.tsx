@@ -22,7 +22,7 @@ export default function WhatIsAmuhi() {
                         </blockquote>
 
                         <div className="what-is-amuhi-brand-essence">
-                            <h3>Brand Essence:</h3>
+                            <h3>Essence</h3>
                             <p>"Continuous Innovation in Faith & Service."</p>
                         </div>
                     </div>

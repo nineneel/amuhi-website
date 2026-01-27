@@ -1,6 +1,7 @@
 import './About.css';
 import HERO_IMAGE from '../../assets/hero-image/about-us.jpeg';
 import KEMPINSKI_IMAGE from '../../assets/events/kempinski.jpeg';
+import WhatIsAmuhi from '../Home/WhatIsAmuhi';
 
 const missionPillars = [
   {
@@ -52,32 +53,32 @@ const brandIdentity = [
   },
 ];
 
-const ecosystemProducts = [
-  {
-    title: 'AMUHI Academy',
-    description: 'Learning & certification hub ensuring industry players meet global standards.',
-  },
-  {
-    title: 'AMUHI Check',
-    description: 'Digital verification system for official travel agencies to prevent fraud.',
-  },
-  {
-    title: 'AMUHI Protect',
-    description: 'Comprehensive protection platform for members against scams and fraud.',
-  },
-  {
-    title: 'AMUHI Care',
-    description: 'Social impact & advocacy program supporting the welfare of pilgrims.',
-  },
-  {
-    title: 'AMUHI Network',
-    description: 'Digital business hub & collaboration space connecting global partners.',
-  },
-  {
-    title: 'AMUHI Digital',
-    description: 'Communication channel & media platform for industry news and updates.',
-  },
-];
+// const ecosystemProducts = [
+//   {
+//     title: 'AMUHI Academy',
+//     description: 'Learning & certification hub ensuring industry players meet global standards.',
+//   },
+//   {
+//     title: 'AMUHI Check',
+//     description: 'Digital verification system for official travel agencies to prevent fraud.',
+//   },
+//   {
+//     title: 'AMUHI Protect',
+//     description: 'Comprehensive protection platform for members against scams and fraud.',
+//   },
+//   {
+//     title: 'AMUHI Care',
+//     description: 'Social impact & advocacy program supporting the welfare of pilgrims.',
+//   },
+//   {
+//     title: 'AMUHI Network',
+//     description: 'Digital business hub & collaboration space connecting global partners.',
+//   },
+//   {
+//     title: 'AMUHI Digital',
+//     description: 'Communication channel & media platform for industry news and updates.',
+//   },
+// ];
 
 export default function AboutPage() {
   return (
@@ -142,6 +143,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <WhatIsAmuhi />
+
       <section className="about-brand">
         <div className="container">
           <div className="about-section__header">
@@ -164,7 +167,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="about-ecosystem">
+      {/* <section className="about-ecosystem">
         <div className="container">
           <div className="about-section__header about-section__header--light">
             <p className="about-kicker about-kicker--light">Our Network</p>
@@ -185,9 +188,9 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="about-cta">
+      {/* <section className="about-cta">
         <div className="container about-cta__content">
           <div>
             <h2>Ready to join the ecosystem?</h2>
@@ -197,7 +200,7 @@ export default function AboutPage() {
             <a className="btn btn-primary" href="/#programs">Explore Programs</a>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

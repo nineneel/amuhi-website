@@ -1,4 +1,4 @@
-import forumImg from '../../../assets/events/forum.jpg';
+import forumImg from '../../../assets/events/forum.png';
 import fairImg from '../../../assets/events/fair.jpg';
 import consortiumImg from '../../../assets/events/consortium.jpg';
 import kempinski from '../../../assets/events/kempinski.jpeg';
