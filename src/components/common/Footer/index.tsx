@@ -1,21 +1,12 @@
+import { Link } from 'react-router-dom';
+import { programs } from '../../../data/programs';
 import './Footer.css';
 
-const associationLinks = [
-    'Home',
-    'Program',
-    'About Us',
-    'Partnership',
-    'Edu Journal',
-    'Resources',
-];
-
-const programLinks = [
-    'AMUHI Academy',
-    'AMUHI Check',
-    'AMUHI Protect',
-    'AMUHI Care',
-    'AMUHI Network',
-    'AMUHI Digital',
+const navigationLinks = [
+    { label: 'Home', to: '/#home' },
+    { label: 'Programs', to: '/#programs' },
+    { label: 'About Us', to: '/about' },
+    { label: 'News', to: '/news' },
 ];
 
 export default function Footer() {
@@ -48,10 +39,12 @@ export default function Footer() {
                     </div>
 
                     <div className="footer-column">
-                        <h4>Association</h4>
+                        <h4>Menu</h4>
                         <nav className="footer-links">
-                            {associationLinks.map((link, index) => (
-                                <a key={index} href="#" className="footer-link">{link}</a>
+                            {navigationLinks.map((link) => (
+                                <Link key={link.to} to={link.to} className="footer-link">
+                                    {link.label}
+                                </Link>
                             ))}
                         </nav>
                     </div>
@@ -59,8 +52,14 @@ export default function Footer() {
                     <div className="footer-column">
                         <h4>Program</h4>
                         <nav className="footer-links">
-                            {programLinks.map((link, index) => (
-                                <a key={index} href="#" className="footer-link">{link}</a>
+                            {programs.map((program) => (
+                                <Link
+                                    key={program.slug}
+                                    to={`/programs/${program.slug}`}
+                                    className="footer-link"
+                                >
+                                    {program.name}
+                                </Link>
                             ))}
                         </nav>
                     </div>
@@ -69,9 +68,9 @@ export default function Footer() {
                 <div className="footer-bottom">
                     <p>© 2026 AMUHI - Asosiasi Milenial Umroh Haji Indonesia. All rights reserved.</p>
                     <div className="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Language: ID</a>
+                        <Link to="/about">About Us</Link>
+                        <Link to="/news">News</Link>
+                        <Link to="/#home">Back to Top</Link>
                     </div>
                 </div>
             </div>
