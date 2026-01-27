@@ -33,14 +33,14 @@ function NewsCard({ article }: { article: NewsArticle }) {
         <NewsMeta article={article} />
         <h3 className="news-card__title">{article.title}</h3>
         <p className="news-card__summary">{article.summary}</p>
-        <div className="news-card__footer">
+        {/* <div className="news-card__footer">
           <span className="news-card__cta">
             Read More
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2" />
             </svg>
           </span>
-        </div>
+        </div> */}
       </div>
     </Link>
   );
@@ -114,9 +114,9 @@ export default function NewsPage() {
               <NewsCard key={article.id} article={article} />
             ))}
           </div>
-          <div className="container news-load-more">
+          {/* <div className="container news-load-more">
             <button type="button">Load More Articles</button>
-          </div>
+          </div> */}
         </section>
       </div>
 

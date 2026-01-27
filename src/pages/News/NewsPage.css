@@ -1,29 +1,21 @@
 .news-page {
-  /* background: var(--white); */
+  background: var(--bg-gradient-light);
   color: var(--primary-navy);
-  /* background: linear-gradient(180deg, rgba(var(--white-rgb), 0.7) 0, rgba(var(--white-rgb), 0.4) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y;  */
 }
 
 .news-container {
-  background: linear-gradient(180deg, rgba(var(--primary-light-rgb), 1) 0, rgba(var(--primary-light-rgb), 0.6) 20%, rgba(var(--white-rgb), 0.5) 30%, rgba(var(--white-rgb), 0) 100%), url('/bg-wave-2.png') top center/100% auto repeat-y; 
+  background: transparent;
 }
 
 .news-hero {
   position: relative;
   padding: var(--spacing-4xl) 0 var(--spacing-3xl);
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    rgba(var(--primary-light-rgb), 1) 0%,
-    rgba(var(--primary-light-rgb), 0.5) 50%,
-    rgba(var(--primary-light-rgb), 0.4) 70%,
-    rgba(var(--primary-light-rgb), 1) 100%
-  ),
-  url('/bg-wave-2.png') top center/100% auto repeat-y;
+  background: transparent;
   color: var(--primary-navy);
 }
 
-.news-hero__accent {
+/* .news-hero__accent {
   position: absolute;
   z-index: 0;
   filter: blur(2px);
@@ -42,20 +34,25 @@
   height: 320px;
   bottom: -140px;
   left: -100px;
-}
+} */
 
 .news-hero__grid {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  display: flex;
+  /* grid-template-columns: 1.5fr 1fr; */
   gap: var(--spacing-2xl);
   align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
 }
 
 .news-hero__intro {
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  align-items: center;
   gap: var(--spacing-md);
 }
 
@@ -109,6 +106,7 @@
 .news-hero__subtitle {
   color: var(--gray-600);
   max-width: 720px;
+  text-align: center;
 }
 
 .news-featured {
@@ -220,7 +218,7 @@
   overflow: hidden;
   background: var(--white);
   /* border: 1px solid var(--gray-100); */
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-sm);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
