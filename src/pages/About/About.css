@@ -80,8 +80,8 @@
 .about-hero__lead {
   font-size: 1.1rem;
   color: rgba(var(--white-rgb), 0.88);
-  line-height: 0.5;
-  max-width: 780px;
+  line-height: 1.5;
+  max-width: 580px;
 }
 
 .about-hero__meta {
@@ -425,5 +425,13 @@
   .about-cta__content {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .about-mission__visual-frame {
+    height: 480px;
+  }
+
+  .about-mission__visual-frame img {
+    object-fit: cover;
   }
 }
