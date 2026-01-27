@@ -1,6 +1,6 @@
 import './About.css';
-
-const HERO_IMAGE = 'https://lh3.googleusercontent.com/aida-public/AB6AXuCIY8XjSnZMQqVbQLwiKfn7lYz04OTG02KweSHz03jal_KqtpxaMyTM6fIK1M-i87CLX_VD6ErpFOZK5GoBk432WW1d4KBtLRmoaIpy8XdxLVvYYNRkCCiCh14XmTRhPlv7ptNXPrsRbb0uK4vAU0bmVn1n8EEZV88Hy9XxtUODlKd8h7DVsIGXW8tILyHkR3Z_aG8H9vJ3_FG2sIAAz7D6whQaaqsqUDn4bQlWXThAlk72EMTYEBFq_kiXggklL1wOzu2Gs6mvb7Y';
+import HERO_IMAGE from '../../assets/hero-image/about-us.jpeg';
+import KEMPINSKI_IMAGE from '../../assets/events/kempinski.jpeg';
 
 const missionPillars = [
   {
@@ -82,10 +82,13 @@ const ecosystemProducts = [
 export default function AboutPage() {
   return (
     <div className="about-page">
-      <section className="about-hero" id="about">
-        <div className="about-hero__accent about-hero__accent--right" aria-hidden="true" />
-        <div className="about-hero__accent about-hero__accent--left" aria-hidden="true" />
-
+      <section
+        className="about-hero"
+        id="about"
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(5, 12, 32, 0.1) 0%, rgba(5, 12, 32, 0.1) 100%), url(${HERO_IMAGE})`,
+        }}
+      >
         <div className="container about-hero__grid">
           <div className="about-hero__content">
             <div className="about-hero__badge">
@@ -97,22 +100,11 @@ export default function AboutPage() {
             </h1>
 
             <p className="about-hero__lead">
-              Empowering the ecosystem through innovation, certification, and collaboration. We bridge trusted,
-              modernized pilgrimage experiences for every stakeholder.
+              “We’re not just an association — we’re a movement shaping the future of Umrah &amp; Hajj.”
             </p>
-          </div>
-
-          <div className="about-hero__visual">
-            <div className="about-hero__image-wrapper">
-              <img src={HERO_IMAGE} alt="AMUHI team collaboration" loading="lazy" />
-              <div className="about-hero__image-overlay">
-                <p className="about-hero__overlay-title">Our Vision</p>
-                <p className="about-hero__overlay-subtitle">
-                  To be the global standard bearer for excellence and integrity in the Hajj &amp; Umrah ecosystem.
-                </p>
-              </div>
-            </div>
-            <div className="about-hero__shadow" aria-hidden="true" />
+            <p className="about-hero__lead">
+              “Continuous Innovation in Faith &amp; Service.”
+            </p>
           </div>
         </div>
       </section>
@@ -121,7 +113,7 @@ export default function AboutPage() {
         <div className="container about-mission__grid">
           <div className="about-mission__visual">
             <div className="about-mission__visual-frame">
-              <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=1600&q=80" alt="Strategy session" loading="lazy" />
+              <img src={KEMPINSKI_IMAGE} alt="Strategy session" loading="lazy" />
             </div>
             <div className="about-mission__visual-card">
               <p className="about-mission__visual-title">Our Focus</p>
