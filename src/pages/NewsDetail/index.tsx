@@ -297,10 +297,9 @@ export default function NewsDetail() {
             <div className="related-news__header">
               <div>
                 <p className="news-kicker">Artikel Terkait</p>
-                {/* <h2>Berita lain yang relevan</h2> */}
               </div>
               <Link className="related-news__see-all" to="/news">
-                Lihat semua berita →
+                Lihat Semua →
               </Link>
             </div>
             <div className="related-news__grid">

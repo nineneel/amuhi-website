@@ -191,7 +191,11 @@
   }
 
   .detail-hero__visual {
-    order: -1;
+    order: 1;
+  }
+
+  .detail-hero__image-wrapper {
+    height: 280px;
   }
 }
 

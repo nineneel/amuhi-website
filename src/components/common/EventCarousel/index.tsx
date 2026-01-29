@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./EventCarousel.css";
@@ -20,11 +20,10 @@ export default function EventCarousel({ events }: EventCarouselProps) {
   return (
     <div className="event-carousel-wrapper">
       <Swiper
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         spaceBetween={24}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 10000, disableOnInteraction: false }}
         breakpoints={{
           768: { slidesPerView: 2 },
           1200: { slidesPerView: 3 },

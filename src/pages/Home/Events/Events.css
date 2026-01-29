@@ -145,6 +145,11 @@
   }
 
   .event-card {
-    min-height: 400px;
+    min-height: 420px;
+
+  }
+
+  .event-content {
+    padding: var(--spacing-lg);
   }
 }
