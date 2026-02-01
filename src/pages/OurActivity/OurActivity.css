@@ -1,0 +1,264 @@
+/* Page Background */
+.activity-page {
+  background: var(--bg-gradient-light);
+  color: var(--primary-navy);
+}
+
+/* Hero Section */
+.activity-hero {
+  position: relative;
+  padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+  overflow: hidden;
+  background: transparent;
+  color: var(--primary-navy);
+}
+
+.activity-hero__content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.activity-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: max-content;
+  background: var(--white);
+  color: var(--primary-navy);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 10px 30px rgba(var(--primary-blue-rgb), 0.08);
+}
+
+.activity-hero__badge span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.activity-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin: 0;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.activity-hero__title-accent {
+  color: var(--primary-blue);
+}
+
+.activity-hero__lead {
+  font-size: 1rem;
+  color: var(--gray-600);
+  max-width: 1400px;
+  text-align: center;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Timeline Section */
+.activity-timeline {
+  padding: var(--spacing-1xl) 0 var(--spacing-4xl);
+  background: transparent;
+}
+
+.activity-timeline .container {
+  padding: var(--spacing-3xl) var(--container-padding);
+  border: none;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  border: none;
+}
+
+.timeline::before {
+  display: none;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 150px;
+  padding-bottom: 60px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  left: 132px;
+  top: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  z-index: 2;
+}
+
+.timeline-item.upcoming .timeline-dot {
+  background: var(--gray-500);
+}
+
+/* Timeline Line */
+.timeline-line {
+  position: absolute;
+  left: 139px;
+  top: 28px;
+  width: 2px;
+  height: calc(110%);
+  background: var(--primary-blue);
+  z-index: 1;
+}
+
+.timeline-item.upcoming .timeline-line {
+  background: var(--gray-500);
+}
+
+/* Timeline Content */
+.timeline-content {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 110px;
+}
+
+.timeline-date__day {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-navy);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.timeline-item.upcoming .timeline-date__day {
+  color: var(--gray-500);
+}
+
+.timeline-date__month-year {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-500);
+  line-height: 1.2;
+}
+
+.timeline-details {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.timeline-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin: 0 0 8px;
+}
+
+.timeline-item.upcoming .timeline-title {
+  color: var(--gray-400);
+}
+
+.timeline-description {
+  font-size: 16px;
+  color: var(--gray-600);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.timeline-item.upcoming .timeline-description {
+  color: var(--gray-400);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .activity-hero {
+    padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+  }
+
+  .activity-hero__title {
+    font-size: 2rem;
+  }
+
+  .activity-hero__lead {
+    font-size: 1rem;
+  }
+
+  .activity-timeline {
+    padding: var(--spacing-2xl) 0 var(--spacing-0xl);
+  }
+
+  .activity-timeline .container {
+    padding: var(--spacing-xl) var(--container-padding);
+  }
+
+  .timeline-item {
+    padding-left: 80px;
+    padding-bottom: 48px;
+  }
+
+  .timeline-dot {
+    left: 60px;
+  }
+
+  .timeline-line {
+    left: 67px;
+  }
+
+  .timeline-date {
+    width: 50px;
+  }
+
+  .timeline-date__day {
+    font-size: 28px;
+  }
+
+  .timeline-date__month-year {
+    font-size: 14px;
+  }
+
+  .timeline-details {
+    padding-left: 15px;
+  }
+
+  .timeline-title {
+    font-size: 20px;
+  }
+
+  .timeline-description {
+    font-size: 14px;
+  }
+
+  .timeline {
+    padding-left: 8px;
+  }
+}

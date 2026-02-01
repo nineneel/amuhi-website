@@ -8,6 +8,7 @@ import DetailProgram from './pages/DetailProgram'
 import NewsPage from './pages/News'
 import NewsDetail from './pages/NewsDetail'
 import AboutPage from './pages/About'
+import OurActivityPage from './pages/OurActivity'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/activity" element={<OurActivityPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/programs/:slug" element={<DetailProgram />} />
