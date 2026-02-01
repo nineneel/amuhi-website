@@ -101,6 +101,7 @@
   font-family: var(--font-heading);
   font-size: clamp(2.2rem, 3vw, 3.2rem);
   line-height: 1.1;
+  text-align: center;
 }
 
 .news-hero__subtitle {
