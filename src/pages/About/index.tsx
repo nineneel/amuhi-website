@@ -1,8 +1,9 @@
 import './About.css';
 import SEO from '../../components/common/SEO';
-import HERO_IMAGE from '../../assets/hero-image/about-us.jpeg';
 import KEMPINSKI_IMAGE from '../../assets/events/kempinski.jpeg';
 import WhatIsAmuhi from '../Home/WhatIsAmuhi';
+
+const HERO_IMAGE = '/og-images/about-hero.jpg';
 
 const missionPillars = [
   {

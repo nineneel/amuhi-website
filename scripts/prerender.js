@@ -3,6 +3,7 @@ import { preview } from 'vite'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { writeFileSync, mkdirSync, existsSync } from 'fs'
+import { newsArticles } from '../src/data/news.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const rootDir = resolve(__dirname, '..')
@@ -10,19 +11,7 @@ const distDir = resolve(rootDir, 'dist')
 
 // All routes to pre-render
 const programSlugs = ['academy', 'check', 'protect', 'care', 'network', 'digital']
-const newsSlugs = [
-  'visa-regulations-2024',
-  'amuhi-digital-app-50k',
-  'amuhi-forum-recap-2023',
-  'flight-quotas-southeast-asia',
-  'academy-certification-program',
-  'travel-tech-alliance',
-  'community-spotlight-10000-pilgrims',
-  'future-of-hajj-digital-mapping',
-  'health-safety-protocols-2023',
-  'annual-summit-early-bird',
-  'strategic-alliance-2024',
-]
+const newsSlugs = newsArticles.map(article => article.slug)
 
 const routes = [
   '/',

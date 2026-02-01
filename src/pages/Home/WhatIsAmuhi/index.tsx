@@ -10,7 +10,7 @@ export default function WhatIsAmuhi() {
                     </div>
                     <div className="what-is-amuhi-content">
                         <p className="what-is-amuhi-description">
-                            <strong>AMUHI</strong> adalah ekosistem kolaboratif para{' '}
+                            <strong>Asosiasi Milenial Umroh Haji Indonesia </strong> atau <strong>AMUHI</strong>   adalah ekosistem kolaboratif para{' '}
                             <strong>founder dan owner travel Umrah & Haji Indonesia</strong> — generasi
                             baru yang berpikir digital, berorientasi masa depan, dan berkomitmen
                             membangun industri yang <strong>transparan, aman, dan kredibel.</strong>
