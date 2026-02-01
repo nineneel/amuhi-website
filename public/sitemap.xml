@@ -1,104 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage - Highest Priority -->
   <url>
     <loc>https://amuhi.id/</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://amuhi.id/og-images/home-hero.jpg</image:loc>
+      <image:title>AMUHI - Asosiasi Milenial Umroh Haji Indonesia</image:title>
+    </image:image>
   </url>
+
+  <!-- About Page -->
   <url>
     <loc>https://amuhi.id/about</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://amuhi.id/og-images/about-hero.jpg</image:loc>
+      <image:title>Tentang AMUHI</image:title>
+    </image:image>
   </url>
+
+  <!-- News Listing -->
   <url>
     <loc>https://amuhi.id/news</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Programs -->
+  <!-- Programs - High Priority -->
   <url>
     <loc>https://amuhi.id/programs/academy</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://amuhi.id/og-images/program-academy.webp</image:loc>
+      <image:title>AMUHI Academy - Sertifikasi dan Pelatihan Umroh Haji</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://amuhi.id/programs/check</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://amuhi.id/og-images/program-check.webp</image:loc>
+      <image:title>AMUHI Check - Verifikasi Travel Umroh Haji</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://amuhi.id/programs/protect</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://amuhi.id/og-images/program-protect.webp</image:loc>
+      <image:title>AMUHI Protect - Perlindungan Konsumen Umroh Haji</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://amuhi.id/programs/care</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://amuhi.id/og-images/program-care.webp</image:loc>
+      <image:title>AMUHI Care - Kepedulian Sosial Umroh Haji</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://amuhi.id/programs/network</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://amuhi.id/og-images/program-network.webp</image:loc>
+      <image:title>AMUHI Network - Jaringan Bisnis Umroh Haji</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://amuhi.id/programs/digital</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://amuhi.id/og-images/program-digital.webp</image:loc>
+      <image:title>AMUHI Digital - Media dan Teknologi Umroh Haji</image:title>
+    </image:image>
   </url>
-  <!-- News Articles -->
+  <!-- Current News Articles -->
   <url>
-    <loc>https://amuhi.id/news/visa-regulations-2024</loc>
+    <loc>https://amuhi.id/news/timeline-haji-2026</loc>
+    <lastmod>2025-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://amuhi.id/news/amuhi-digital-app-50k</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/amuhi-forum-recap-2023</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/flight-quotas-southeast-asia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/academy-certification-program</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/travel-tech-alliance</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/community-spotlight-10000-pilgrims</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/future-of-hajj-digital-mapping</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/health-safety-protocols-2023</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/annual-summit-early-bird</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://amuhi.id/news/strategic-alliance-2024</loc>
+    <loc>https://amuhi.id/news/damri-transport-2026</loc>
+    <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

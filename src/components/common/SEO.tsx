@@ -16,6 +16,7 @@ interface SEOProps {
   noIndex?: boolean;
   imageWidth?: number;
   imageHeight?: number;
+  keywords?: string;
 }
 
 const SITE_NAME = 'AMUHI - Asosiasi Milenial Umroh Haji Indonesia';
@@ -33,6 +34,7 @@ export default function SEO({
   noIndex = false,
   imageWidth,
   imageHeight,
+  keywords,
 }: SEOProps) {
   const location = useLocation();
   const pathname = (url ?? location.pathname ?? '/').startsWith('/')
@@ -67,9 +69,21 @@ export default function SEO({
       <title>{pageTitle}</title>
       <meta name="title" content={pageTitle} />
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+
+      {/* Language and Locale */}
+      <html lang="id" />
+      <meta httpEquiv="content-language" content="id-ID" />
+      <meta property="og:locale" content="id_ID" />
+      <meta property="og:locale:alternate" content="en_US" />
 
       {/* Canonical URL */}
       <link rel="canonical" href={pageUrl} />
+
+      {/* Alternate Language URLs for International SEO */}
+      <link rel="alternate" hrefLang="id" href={pageUrl} />
+      <link rel="alternate" hrefLang="en" href={pageUrl} />
+      <link rel="alternate" hrefLang="x-default" href={pageUrl} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
