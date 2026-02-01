@@ -33,7 +33,7 @@ Tells Google that AMUHI is an official organization:
   "name": "AMUHI - Asosiasi Milenial Umroh Haji Indonesia",
   "alternateName": "AMUHI",
   "legalName": "Asosiasi Milenial Umroh Haji Indonesia",
-  "url": "https://amuhi.id",
+  "url": "https://www.amuhi.id",
   "foundingDate": "2020",
   "slogan": "Building Better Future untuk Industri Umroh & Haji",
   "knowsAbout": [
@@ -55,10 +55,10 @@ Enables site search and sitelinks:
 {
   "@type": "WebSite",
   "name": "AMUHI",
-  "url": "https://amuhi.id",
+  "url": "https://www.amuhi.id",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://amuhi.id/search?q={search_term_string}"
+    "target": "https://www.amuhi.id/search?q={search_term_string}"
   },
   "inLanguage": ["id-ID", "en-US"]
 }
@@ -91,8 +91,8 @@ For better navigation display (ready for future use)
 <html lang="id" />
 <meta http-equiv="content-language" content="id-ID" />
 <meta property="og:locale" content="id_ID" />
-<link rel="alternate" hreflang="id" href="https://amuhi.id/" />
-<link rel="alternate" hreflang="en" href="https://amuhi.id/" />
+<link rel="alternate" hreflang="id" href="https://www.amuhi.id/" />
+<link rel="alternate" hreflang="en" href="https://www.amuhi.id/" />
 ```
 
 ---
@@ -142,12 +142,12 @@ AMUHI adalah asosiasi resmi travel umroh dan haji Indonesia. Menyediakan sertifi
 **Example:**
 ```xml
 <url>
-  <loc>https://amuhi.id/programs/check</loc>
+  <loc>https://www.amuhi.id/programs/check</loc>
   <lastmod>2026-02-02</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
   <image:image>
-    <image:loc>https://amuhi.id/og-images/program-check.webp</image:loc>
+    <image:loc>https://www.amuhi.id/og-images/program-check.webp</image:loc>
     <image:title>AMUHI Check - Verifikasi Travel Umroh Haji</image:title>
   </image:image>
 </url>
@@ -167,15 +167,15 @@ AMUHI adalah asosiasi resmi travel umroh dan haji Indonesia. Menyediakan sertifi
 **Renamed and moved images for stable URLs:**
 ```
 Before (build-hashed):
-https://amuhi.id/assets/Check-1-feMzgIRH.webp
+https://www.amuhi.id/assets/Check-1-feMzgIRH.webp
 
 After (stable):
-https://amuhi.id/og-images/program-check.webp
+https://www.amuhi.id/og-images/program-check.webp
 ```
 
 **All OG Images:**
 - home-hero.jpg
-- about-hero.jpg
+- about-hero.webp
 - program-academy.webp
 - program-check.webp
 - program-protect.webp
@@ -197,7 +197,7 @@ https://amuhi.id/og-images/program-check.webp
 **Behavior:**
 - All www.amuhi.id URLs → redirect to amuhi.id
 - All http:// URLs → redirect to https://
-- Canonical tags consistently use https://amuhi.id
+- Canonical tags consistently use https://www.amuhi.id
 
 **Server-level redirects:** [public/.htaccess](public/.htaccess)
 ```apache
@@ -267,7 +267,7 @@ Follow the guide: [GOOGLE_SEARCH_CONSOLE_SETUP.md](GOOGLE_SEARCH_CONSOLE_SETUP.m
 
 **Required Actions:**
 1. Visit https://search.google.com/search-console/
-2. Add property: `https://amuhi.id`
+2. Add property: `https://www.amuhi.id`
 3. Download verification file
 4. Upload to `/public/` folder
 5. Deploy and verify
@@ -288,10 +288,10 @@ npm run build
 After verification in Search Console:
 - Use URL Inspection tool
 - Request indexing for:
-  - https://amuhi.id/
-  - https://amuhi.id/about
-  - https://amuhi.id/programs/check
-  - https://amuhi.id/programs/academy
+  - https://www.amuhi.id/
+  - https://www.amuhi.id/about
+  - https://www.amuhi.id/programs/check
+  - https://www.amuhi.id/programs/academy
 
 ### 4. Monitor Performance
 
@@ -315,35 +315,35 @@ After verification in Search Console:
 
 1. **Google Rich Results Test**
    - Visit: https://search.google.com/test/rich-results
-   - Enter: `https://amuhi.id`
+   - Enter: `https://www.amuhi.id`
    - Should show: Organization + WebSite schemas
 
 2. **Schema.org Validator**
    - Visit: https://validator.schema.org/
-   - Enter: `https://amuhi.id`
+   - Enter: `https://www.amuhi.id`
    - Should show no errors
 
 ### Check Meta Tags
 
 1. **View Page Source**
-   - Visit https://amuhi.id
+   - Visit https://www.amuhi.id
    - Right-click → "View Page Source"
    - Search for: `<script type="application/ld+json">`
    - Should see Organization and WebSite schemas
 
 2. **Facebook Sharing Debugger**
    - Visit: https://developers.facebook.com/tools/debug/
-   - Test: https://amuhi.id
+   - Test: https://www.amuhi.id
    - Check og:image shows correct hero image
 
 3. **Twitter Card Validator**
    - Visit: https://cards-dev.twitter.com/validator
-   - Test: https://amuhi.id
+   - Test: https://www.amuhi.id
    - Check card preview
 
 ### Check Sitemap
 
-1. Visit: https://amuhi.id/sitemap.xml
+1. Visit: https://www.amuhi.id/sitemap.xml
 2. Should see all pages with dates and images
 3. No 404 errors
 
@@ -354,7 +354,7 @@ After verification in Search Console:
 ### 1. Get More Backlinks
 
 You already have news coverage! Request:
-- Republika, Inilah.com to link to https://amuhi.id
+- Republika, Inilah.com to link to https://www.amuhi.id
 - Change "AMUHI" mentions to clickable links
 - Update author bio with website link
 
