@@ -20,7 +20,6 @@ export default function Footer() {
                             <h4 className="footer-label">ASOSIASI MILENIAL UMROH HAJI INDONESIA</h4>
                             <p className="brand-subtitle">Address:</p>
                             <address className="footer-address">
-                                Kasablanca Office Tower A, Lantain 18, Unit A-H <br />
                                 Jl. Casablanca Raya Kav No.88, Jakarta Selatan, DKI Jakarta
                             </address>
                         </div>
@@ -66,7 +65,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>© 2026 AMUHI - Asosiasi Milenial Umroh Haji Indonesia. All rights reserved.</p>
+                    <p>© 2026 AMUHI - Asosiasi Milenial Umroh Haji Indonesia. All rights reserved. </p>
                     <div className="footer-bottom-links">
                         <Link to="/about">About Us</Link>
                         <Link to="/news">News</Link>
