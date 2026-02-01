@@ -22,7 +22,7 @@ interface SEOProps {
 const SITE_NAME = 'AMUHI - Asosiasi Milenial Umroh Haji Indonesia';
 const DEFAULT_DESCRIPTION = 'AMUHI - Asosiasi Milenial Umroh Haji Indonesia. Building Better Future untuk industri umroh dan haji Indonesia.';
 const BASE_URL = 'https://amuhi.id';
-const DEFAULT_OG_IMAGE = '/amuhi-meeting.png';
+const DEFAULT_OG_IMAGE = '/amuhi-meeting.jpeg';
 
 export default function SEO({
   title,
