@@ -110,7 +110,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Use instant jumps for route changes; specific components trigger smooth scrolling when needed */
+  scroll-behavior: auto;
   font-size: 16px;
 }
 
