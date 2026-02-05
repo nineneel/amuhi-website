@@ -87,6 +87,8 @@ export default function NewsPage() {
         title="Berita & Insight"
         description="Dapatkan update terbaru tentang industri Umrah dan Haji, regulasi, dan berita dari komunitas AMUHI."
         image={featuredArticle.coverImage}
+        imageWidth={1200}
+        imageHeight={630}
         url="/news"
       />
       <section className="news-hero">

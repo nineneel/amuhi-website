@@ -7,7 +7,6 @@ import AsSeenOn from './AsSeenOn'
 import Events from './Events'
 // import Organization from './Organization'
 import Testimonials from './Testimonials'
-import homeHeroImage from '../../assets/home-hero/hero-1.jpg'
 
 export default function HomePage() {
     return (
@@ -15,7 +14,9 @@ export default function HomePage() {
             <SEO
                 title="AMUHI - Asosiasi Milenial Umroh Haji Indonesia | Building Better Future"
                 description="AMUHI adalah asosiasi resmi travel umroh dan haji Indonesia. Menyediakan sertifikasi, verifikasi, dan perlindungan untuk industri umroh haji melalui 6 program: Academy, Check, Protect, Care, Network, dan Digital."
-                image={homeHeroImage}
+                image="/og-images/home-hero.png"
+                imageWidth={1200}
+                imageHeight={630}
                 keywords="AMUHI, Asosiasi Umroh Indonesia, Asosiasi Haji Indonesia, travel umroh, travel haji, sertifikasi travel umroh, verifikasi travel haji, AMUHI Academy, AMUHI Check, AMUHI Protect, asosiasi milenial umroh haji, industri umroh Indonesia, industri haji Indonesia"
                 url="/"
             />

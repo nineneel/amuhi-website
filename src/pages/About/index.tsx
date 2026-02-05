@@ -87,7 +87,9 @@ export default function AboutPage() {
       <SEO
         title="Tentang AMUHI"
         description="AMUHI - Asosiasi Milenial Umroh Haji Indonesia. Mewujudkan ekosistem Umrah dan Haji yang bebas dari scam, fraud, dan ketidaktransparanan."
-        image={HERO_IMAGE}
+        image="/og-images/about-hero.png"
+        imageWidth={1200}
+        imageHeight={630}
         url="/about"
       />
       <section
