@@ -13,8 +13,8 @@ export default function StructuredData({ type = 'organization', breadcrumbs }: S
     name: 'AMUHI - Asosiasi Milenial Umroh Haji Indonesia',
     alternateName: 'AMUHI',
     legalName: 'Asosiasi Milenial Umroh Haji Indonesia',
-    url: 'https://amuhi.id',
-    logo: 'https://amuhi.id/logo.png',
+    url: 'https://www.amuhi.id',
+    logo: 'https://www.amuhi.id/logo.png',
     foundingDate: '2020',
     description: 'AMUHI adalah ekosistem digital dan hub startup yang bertujuan meningkatkan keamanan, kenyamanan, dan kepercayaan publik dalam industri haji dan umroh. Melalui enam pilar—AMUHI Academy, Check, Protect, Care, Network, dan Digital—asosiasi ini memfasilitasi pelatihan, sertifikasi, dan advokasi untuk mencipta standar baru yang terintegrasi di idntimes.com.',
     slogan: 'Building Better Future untuk Industri Umroh & Haji',
@@ -54,21 +54,21 @@ export default function StructuredData({ type = 'organization', breadcrumbs }: S
     '@type': 'WebSite',
     name: 'AMUHI - Asosiasi Milenial Umroh Haji Indonesia',
     alternateName: 'AMUHI',
-    url: 'https://amuhi.id',
+    url: 'https://www.amuhi.id',
     description: 'AMUHI - Building Better Future untuk industri umroh dan haji Indonesia',
     publisher: {
       '@type': 'Organization',
       name: 'AMUHI',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://amuhi.id/logo.png',
+        url: 'https://www.amuhi.id/logo.png',
       },
     },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://amuhi.id/search?q={search_term_string}',
+        urlTemplate: 'https://www.amuhi.id/search?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
@@ -84,7 +84,7 @@ export default function StructuredData({ type = 'organization', breadcrumbs }: S
           '@type': 'ListItem',
           position: index + 1,
           name: crumb.name,
-          item: `https://amuhi.id${crumb.url}`,
+          item: `https://www.amuhi.id${crumb.url}`,
         })),
       }
     : null;

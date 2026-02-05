@@ -21,8 +21,8 @@ interface SEOProps {
 
 const SITE_NAME = 'AMUHI - Asosiasi Milenial Umroh Haji Indonesia';
 const DEFAULT_DESCRIPTION = 'AMUHI - Asosiasi Milenial Umroh Haji Indonesia. Building Better Future untuk industri umroh dan haji Indonesia.';
-const BASE_URL = 'https://amuhi.id';
-const DEFAULT_OG_IMAGE = '/amuhi-meeting.png';
+const BASE_URL = 'https://www.amuhi.id';
+const DEFAULT_OG_IMAGE = '/amuhi-meeting.jpeg';
 
 export default function SEO({
   title,
@@ -46,11 +46,14 @@ export default function SEO({
       ? window.location.origin
       : null;
 
-  // Normalize domain: remove www. subdomain for canonical URL
+  // Normalize domain: ensure www. subdomain is present
   const normalizeOrigin = (origin: string | null): string => {
     if (!origin || origin.includes('localhost')) return BASE_URL;
-    // Replace www. with just the protocol for canonical URL
-    return origin.replace(/^https?:\/\/www\./, 'https://');
+    // Ensure www. is present
+    if (!/^https?:\/\/www\./.test(origin)) {
+      return origin.replace(/^(https?:\/\/)/, '$1www.');
+    }
+    return origin;
   };
 
   const origin = normalizeOrigin(runtimeOrigin);
@@ -60,8 +63,8 @@ export default function SEO({
   const imageUrl = image?.startsWith('http')
     ? image
     : image
-      ? `${origin}${image}`
-      : `${origin}${DEFAULT_OG_IMAGE}`;
+      ? `${BASE_URL}${image}`
+      : `${BASE_URL}${DEFAULT_OG_IMAGE}`;
 
   return (
     <Helmet>

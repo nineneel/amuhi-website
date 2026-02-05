@@ -27,7 +27,7 @@ Currently, when people search "amuhi" on Google:
 2. **Add Property**
    - Click "Add Property" (top left)
    - Select **"URL prefix"**
-   - Enter: `https://amuhi.id`
+   - Enter: `https://www.amuhi.id`
    - Click "Continue"
 
 3. **Choose Verification Method**
@@ -37,7 +37,7 @@ Currently, when people search "amuhi" on Google:
 4. **Upload to Your Website**
    - Place the downloaded file in `/public/` folder
    - Build and deploy your site: `npm run build`
-   - The file will be accessible at: `https://amuhi.id/google1234567890abcdef.html`
+   - The file will be accessible at: `https://www.amuhi.id/google1234567890abcdef.html`
 
 5. **Verify**
    - Go back to Search Console
@@ -86,11 +86,11 @@ Google crawls sites automatically, but you can speed up the process:
 
 2. **Request Indexing for These Priority Pages:**
    ```
-   https://amuhi.id/
-   https://amuhi.id/about
-   https://amuhi.id/programs/academy
-   https://amuhi.id/programs/check
-   https://amuhi.id/news
+   https://www.amuhi.id/
+   https://www.amuhi.id/about
+   https://www.amuhi.id/programs/academy
+   https://www.amuhi.id/programs/check
+   https://www.amuhi.id/news
    ```
 
 3. **For Each URL:**
@@ -110,7 +110,7 @@ Bing is the 2nd largest search engine and easier to rank on:
 1. Visit: https://www.bing.com/webmasters
 2. Sign in with Microsoft account
 3. Click "Add a site"
-4. Enter: `https://amuhi.id`
+4. Enter: `https://www.amuhi.id`
 5. **Import from Google Search Console** (saves time!)
    - Select "Import from Google Search Console"
    - Sign in and authorize
@@ -180,7 +180,7 @@ In Google Search Console, monitor:
 
 ### "Sitemap Could Not Be Read"
 - Verify `/public/sitemap.xml` exists
-- Check it's accessible at `https://amuhi.id/sitemap.xml`
+- Check it's accessible at `https://www.amuhi.id/sitemap.xml`
 - Ensure proper XML format
 
 ### "Pages Not Indexed"
@@ -200,12 +200,12 @@ In Google Search Console, monitor:
 
 ### 2. Get More Backlinks
 You already have news coverage (Republika, Inilah.com). Request:
-- Update articles to link to `https://amuhi.id` directly
+- Update articles to link to `https://www.amuhi.id` directly
 - Ask to change "AMUHI" mentions to hyperlinks
 - Each backlink from news sites boosts authority
 
 ### 3. Social Media Linking
-Update your social profiles to link to `https://amuhi.id`:
+Update your social profiles to link to `https://www.amuhi.id`:
 - Instagram bio
 - Facebook page
 - LinkedIn company page
@@ -218,7 +218,7 @@ This signals to Google that AMUHI is an official brand.
 
 Before submitting to Search Console:
 
-- [x] Website deployed at https://amuhi.id
+- [x] Website deployed at https://www.amuhi.id
 - [x] Sitemap.xml accessible
 - [x] Meta tags and structured data added (done in this session)
 - [x] OG images in public folder (done in this session)
@@ -233,7 +233,7 @@ Before submitting to Search Console:
 
 Common issues:
 1. **"Can't access verification file"** → Make sure it's in `/public/` folder and deployed
-2. **"Sitemap not found"** → Check `https://amuhi.id/sitemap.xml` is accessible
+2. **"Sitemap not found"** → Check `https://www.amuhi.id/sitemap.xml` is accessible
 3. **"Pages not appearing"** → Be patient, can take 2-4 weeks for new sites
 
 ---
