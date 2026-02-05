@@ -1,4 +1,5 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
+import { createPortal } from 'react-dom';
 import './LeadForm.css';
 import ComingSoonImage from '../../../assets/hero-image/about-us.webp';
 
@@ -163,7 +164,7 @@ export default function LeadForm({
         </div>
       </form>
 
-      {showComingSoon && (
+      {showComingSoon && createPortal(
         <div className="lead-form__coming-soon-overlay" onClick={closeComingSoon}>
           <div className="lead-form__coming-soon-modal" onClick={(e) => e.stopPropagation()}>
             <button
@@ -191,7 +192,8 @@ export default function LeadForm({
               </p>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );

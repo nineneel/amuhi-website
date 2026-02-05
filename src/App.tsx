@@ -9,6 +9,7 @@ import NewsPage from './pages/News'
 import NewsDetail from './pages/NewsDetail'
 import AboutPage from './pages/About'
 import OurActivityPage from './pages/OurActivity'
+import NotFoundPage from './pages/NotFound'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/programs/:slug" element={<DetailProgram />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
