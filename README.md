@@ -1,73 +1,100 @@
-# React + TypeScript + Vite
+# Amuhi Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official landing page website for Amuhi.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework:** React 19
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Routing:** React Router DOM
+- **Styling:** CSS
+- **UI Components:** Swiper (carousel)
+- **SEO:** React Helmet Async
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repository
+git clone https://github.com/your-org/amuhi-website.git
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Navigate to project directory
+cd amuhi-website
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Start development server (runs on port 3000)
+npm run dev
 ```
+
+### Build
+
+```bash
+# Build for production
+npm run build
+
+# Build for staging
+npm run build:staging
+
+# Preview production build
+npm run serve
+```
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+│   └── common/       # Shared components (Navbar, Footer, etc.)
+├── pages/            # Page components
+│   ├── Home/         # Homepage sections
+│   ├── About/        # About page
+│   ├── News/         # News listing
+│   ├── NewsDetail/   # Individual news article
+│   ├── DetailProgram/# Program details
+│   ├── OurActivity/  # Activity page
+│   └── NotFound/     # 404 page
+├── data/             # Static data files
+├── types/            # TypeScript type definitions
+├── assets/           # Static assets (images, icons)
+├── App.tsx           # Main app component with routing
+├── main.tsx          # Application entry point
+└── index.css         # Global styles
+```
+
+## Available Routes
+
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage |
+| `/about` | About page |
+| `/activity` | Our Activity page |
+| `/news` | News listing |
+| `/news/:slug` | News detail |
+| `/programs/:slug` | Program detail |
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run build:staging` | Build for staging environment |
+| `npm run serve` | Preview production build |
+| `npm run test` | Run tests |
+
+## License
+
+All rights reserved.

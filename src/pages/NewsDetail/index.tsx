@@ -211,6 +211,8 @@ export default function NewsDetail() {
         title={article.title}
         description={article.summary}
         image={article.coverImage}
+        imageWidth={1200}
+        imageHeight={630}
         url={`/news/${article.slug}`}
         type="article"
         article={{
