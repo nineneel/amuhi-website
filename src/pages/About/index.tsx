@@ -2,8 +2,7 @@ import './About.css';
 import SEO from '../../components/common/SEO';
 import KEMPINSKI_IMAGE from '../../assets/events/kempinski.jpeg';
 import WhatIsAmuhi from '../Home/WhatIsAmuhi';
-
-const HERO_IMAGE = '/og-images/about-hero.webp';
+import HERO_IMAGE from '../../assets/hero-image/about-us.webp';
 
 const missionPillars = [
   {
