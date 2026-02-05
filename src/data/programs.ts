@@ -7,13 +7,13 @@ import careIcon from '../assets/programs/icon-care.png';
 import networkIcon from '../assets/programs/icon-network.png';
 import digitalIcon from '../assets/programs/icon-digital.png';
 
-// Hero images (Program-1.webp) - Using public folder for SEO
-const academicHero = '/og-images/program-academy.webp';
-const checkHero = '/og-images/program-check.webp';
-const protectHero = '/og-images/program-protect.webp';
-const careHero = '/og-images/program-care.webp';
-const networkHero = '/og-images/program-network.webp';
-const digitalHero = '/og-images/program-digital.webp';
+// Hero images (Program-1.webp)
+import academicHero from '../assets/programs/images/Academic-1.webp';
+import checkHero from '../assets/programs/images/Check-1.webp';
+import protectHero from '../assets/programs/images/Protect-1.webp';
+import careHero from '../assets/programs/images/Care-1.webp';
+import networkHero from '../assets/programs/images/Network-1.webp';
+import digitalHero from '../assets/programs/images/Digital-1.webp';
 
 // Main images (Program-2.webp)
 // import academicMain from '../assets/programs/images/Academic-2.webp';

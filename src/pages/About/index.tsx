@@ -2,8 +2,7 @@ import './About.css';
 import SEO from '../../components/common/SEO';
 import KEMPINSKI_IMAGE from '../../assets/events/kempinski.jpeg';
 import WhatIsAmuhi from '../Home/WhatIsAmuhi';
-
-const HERO_IMAGE = '/og-images/about-hero.webp';
+import HERO_IMAGE from '../../assets/hero-image/about-us.webp';
 
 const missionPillars = [
   {
@@ -88,7 +87,9 @@ export default function AboutPage() {
       <SEO
         title="Tentang AMUHI"
         description="AMUHI - Asosiasi Milenial Umroh Haji Indonesia. Mewujudkan ekosistem Umrah dan Haji yang bebas dari scam, fraud, dan ketidaktransparanan."
-        image={HERO_IMAGE}
+        image="/og-images/about-hero.png"
+        imageWidth={1200}
+        imageHeight={630}
         url="/about"
       />
       <section

@@ -230,41 +230,46 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(5, 12, 32, 0.9);
   z-index: 1000;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 20px;
-  backdrop-filter: blur(4px);
+  padding: 48px 24px 24px;
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
 }
 
 .hero-modal-content {
   position: relative;
-  background: var(--white);
-  border-radius: 16px;
-  padding: 32px 24px;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
   max-width: 500px;
   width: 100%;
-  max-height: 90vh;
-  overflow-y: auto;
 }
 
 .hero-modal-close {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  background: transparent;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.15);
   border: none;
-  font-size: 2rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
   line-height: 1;
-  color: var(--gray-600);
+  color: var(--white);
   cursor: pointer;
-  padding: 4px 8px;
-  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  z-index: 10;
 }
 
 .hero-modal-close:hover {
-  color: var(--black);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* Responsive */

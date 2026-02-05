@@ -82,7 +82,7 @@ export const newsArticles: NewsArticle[] = [
     category: 'Persiapan Haji 2026',
     tags: ['Haji 2026', 'Regulasi', 'Timeline'],
     badge: 'Update Lapangan',
-    coverImage: 'https://bpkh.go.id/storage/media/images/2025/12/rencana-perjalanan-ibadah-haji-2026-1765346501-eMchpY.jpeg',
+    coverImage: '/og-images/news/haji-2026-timeline.png',
     publishedAt: '2025-07-22T00:00:00Z',
     readTimeMinutes: 7,
     author: {
@@ -150,8 +150,7 @@ export const newsArticles: NewsArticle[] = [
     category: 'Logistik Haji & Umrah',
     tags: ['Transportasi', 'Haji 2026', 'Umrah'],
     badge: 'Kemitraan',
-    coverImage:
-      'https://akcdn.detik.net.id/community/media/visual/2025/03/17/bpkh-limited-luncurkan-60-bus-untuk-dukung-mobilitas-jemaah-haji-dan-umrah-1742193550366_169.jpeg?w=700&q=90',
+    coverImage: '/og-images/news/damri-transport-2026.png',
     publishedAt: '2025-02-10T00:00:00Z',
     readTimeMinutes: 7,
     author: {

@@ -68,10 +68,6 @@ export default function Registration({ programName, features }: RegistrationProp
             buttonText="Submit Registration"
             variant="light"
             onSubmit={handleSubmit}
-            placeholders={{
-              travelName: 'Travel Agency Name *',
-              idNumber: 'ID Number (KTP/Passport) *',
-            }}
           />
         </div>
       </div>
