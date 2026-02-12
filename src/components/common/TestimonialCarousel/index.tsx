@@ -1,5 +1,7 @@
+import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './TestimonialCarousel.css';
@@ -8,6 +10,7 @@ interface Testimonial {
     text: string;
     name: string;
     role: string;
+    videoUrl?: string;
 }
 
 interface TestimonialCarouselProps {
@@ -15,6 +18,16 @@ interface TestimonialCarouselProps {
 }
 
 export default function TestimonialCarousel({ testimonials }: TestimonialCarouselProps) {
+    const swiperRef = useRef<SwiperType | null>(null);
+
+    const stopAutoplay = () => {
+        swiperRef.current?.autoplay?.stop();
+    };
+
+    const startAutoplay = () => {
+        swiperRef.current?.autoplay?.start();
+    };
+
     return (
         <div className="testimonial-carousel-wrapper">
             <Swiper
@@ -22,7 +35,7 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
                 spaceBetween={30}
                 slidesPerView={1}
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
                 breakpoints={{
                     768: {
                         slidesPerView: 2,
@@ -31,16 +44,30 @@ export default function TestimonialCarousel({ testimonials }: TestimonialCarouse
                         slidesPerView: 3,
                     },
                 }}
+                onSwiper={(swiper) => {
+                    swiperRef.current = swiper;
+                }}
                 className="testimonial-swiper"
             >
                 {testimonials.map((testimonial, index) => (
                     <SwiperSlide key={index}>
-                        <article className="testimonial-card">
-                            <div className="testimonial-quote-icon">
-                                <svg width="28" height="20" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 17.1429V0H14.2857V17.1429L8.57143 30H0L5.71429 17.1429H0ZM22.8571 17.1429V0H37.1429V17.1429L31.4286 30H22.8571L28.5714 17.1429H22.8571Z" fill="currentColor" />
-                                </svg>
-                            </div>
+                        <article className={`testimonial-card${testimonial.videoUrl ? ' testimonial-card--video' : ''}`}>
+                            {testimonial.videoUrl ? (
+                                <div className="testimonial-video" onMouseEnter={stopAutoplay} onMouseLeave={startAutoplay}>
+                                    <iframe
+                                        src={testimonial.videoUrl}
+                                        title={testimonial.name}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    />
+                                </div>
+                            ) : (
+                                <div className="testimonial-quote-icon">
+                                    <svg width="28" height="20" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 17.1429V0H14.2857V17.1429L8.57143 30H0L5.71429 17.1429H0ZM22.8571 17.1429V0H37.1429V17.1429L31.4286 30H22.8571L28.5714 17.1429H22.8571Z" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            )}
                             <p className="testimonial-text">{testimonial.text}</p>
                             <div className="testimonial-separator"></div>
                             <div className="testimonial-info">

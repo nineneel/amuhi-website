@@ -5,6 +5,18 @@ import tribunNewsImage from "../../../assets/as-seen-on/tribun-news.png";
 import republikaImage from "../../../assets/as-seen-on/republika.png";
 import merdekaImage from "../../../assets/as-seen-on/merdeka.png";
 
+import logoDmiTv from "../../../assets/as-seen-on/logo/dmi-tv.png";
+import logoIdnTimes from "../../../assets/as-seen-on/logo/idn-times.png";
+import logoInilah from "../../../assets/as-seen-on/logo/inilah.webp";
+import logoMerdeka from "../../../assets/as-seen-on/logo/merdeka.png";
+import logoRepublika from "../../../assets/as-seen-on/logo/republika.png";
+import logoTribunNews from "../../../assets/as-seen-on/logo/tribun-news.webp";
+
+const logos = [
+    logoDmiTv, logoIdnTimes, logoInilah,
+    logoMerdeka, logoRepublika, logoTribunNews,
+];
+
 import screenshot1 from "../../../assets/as-seen-on/screenshot-1.png";
 import screenshot2 from "../../../assets/as-seen-on/screenshot-2.png";
 import screenshot3 from "../../../assets/as-seen-on/screenshot-3.png";
@@ -116,6 +128,14 @@ const articles = [
 export default function AsSeenOn() {
     return (
         <section id="as-seen-on" className="as-seen-on section">
+            <div className="as-seen-on-marquee">
+                <div className="as-seen-on-marquee-track">
+                    {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
+                        <img key={index} src={logo} alt="" className="as-seen-on-marquee-logo" />
+                    ))}
+                </div>
+            </div>
+
             <div className="container">
                 <div className="as-seen-on-wrapper">
                     <div className="as-seen-on-header">

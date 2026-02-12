@@ -4,6 +4,48 @@
     background: var(--primary-light);
 }
 
+/* Marquee Logos */
+.as-seen-on-marquee {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 0 var(--spacing-5xl);
+}
+
+.as-seen-on-marquee-track {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    width: max-content;
+    animation: as-seen-on-scroll 30s linear infinite;
+}
+
+.as-seen-on-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.as-seen-on-marquee-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    /* opacity: 0.7; */
+    mix-blend-mode: multiply;
+    transition: opacity 0.3s ease;
+}
+
+.as-seen-on-marquee-logo:hover {
+    opacity: 1;
+}
+
+@keyframes as-seen-on-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .as-seen-on-wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -139,6 +181,19 @@
 }
 
 @media (max-width: 768px) {
+    .as-seen-on-marquee {
+        padding: 0 0 var(--spacing-3xl) 0;
+    }
+
+    .as-seen-on-marquee-track {
+        gap: 32px;
+        animation-duration: 20s;
+    }
+
+    .as-seen-on-marquee-logo {
+        height: 32px;
+    }
+
     .as-seen-on-title {
         font-size: 2rem;
     }

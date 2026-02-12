@@ -95,6 +95,30 @@ src/
 | `npm run serve` | Preview production build |
 | `npm run test` | Run tests |
 
+## Deployment
+
+### Staging
+
+Staging is deployed automatically when pushing to the `staging` branch.
+
+```bash
+git push origin staging
+```
+
+### Production
+
+Production is deployed automatically when a version tag is pushed.
+
+```bash
+# Create a tag
+git tag v1.0.0
+
+# Push the tag to trigger deployment
+git push origin v1.0.0
+```
+
+Both workflows can also be triggered manually from the **Actions** tab on GitHub.
+
 ## License
 
 All rights reserved.

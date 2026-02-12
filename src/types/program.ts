@@ -47,6 +47,7 @@ export interface ProgramTestimonial {
   text: string;
   name: string;
   role: string;
+  videoUrl?: string;
 }
 
 export interface ProgramRegistrationFeature {
