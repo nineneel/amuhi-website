@@ -25,6 +25,19 @@ function resolveApiBaseUrl(): string | null {
 
 const BASE_URL = resolveApiBaseUrl();
 
+export function resolveBackendOrigin(): string | null {
+  if (!BASE_URL) return null;
+
+  // If the API base URL is absolute, reuse its origin for browser navigations like `/login`.
+  // If it's relative (e.g. `/api/v1`), fall back to the current page origin.
+  try {
+    return new URL(BASE_URL).origin;
+  } catch {
+    if (typeof window !== 'undefined') return window.location.origin;
+    return null;
+  }
+}
+
 export class ApiError extends Error {
   status: number;
   errors?: Record<string, string[]>;

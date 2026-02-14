@@ -1,8 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { createPortal } from 'react-dom';
 import './LeadForm.css';
-import ComingSoonImage from '../../../assets/hero-image/about-us.webp';
-import type { ApiError } from '../../../lib/api-client';
+import { resolveBackendOrigin, type ApiError } from '../../../lib/api-client';
 
 export type LeadFormData = {
   category: 'ppiu_pihk' | 'pt' | 'personal';
@@ -46,14 +45,9 @@ export default function LeadForm({
     email: '',
     companyName: '',
   });
-  const [showComingSoon, setShowComingSoon] = useState(false);
 
   // Derive dialog state directly from props (no useEffect needed)
   const showDialog: 'success' | 'error' | null = isSuccess ? 'success' : error ? 'error' : null;
-
-  const closeComingSoon = () => {
-    setShowComingSoon(false);
-  };
 
   const closeDialog = () => {
     if (isSuccess) {
@@ -89,6 +83,8 @@ export default function LeadForm({
     }
     return error.message;
   })();
+
+  const loginHref = `${resolveBackendOrigin() ?? ''}/login`;
 
   return (
     <div className={rootClass} data-variant={variant}>
@@ -177,9 +173,9 @@ export default function LeadForm({
 
         <div className="lead-form__post-submit">
           <span className="lead-form__already">Sudah mendaftar?</span>
-          <button type="button" className="lead-form__login" onClick={() => setShowComingSoon(true)}>
+          <a className="lead-form__login" href={loginHref}>
             Login
-          </button>
+          </a>
         </div>
       </form>
 
@@ -235,38 +231,6 @@ export default function LeadForm({
         document.body
       )}
 
-      {/* Coming Soon Modal */}
-      {showComingSoon && createPortal(
-        <div className="lead-form__coming-soon-overlay" onClick={closeComingSoon}>
-          <div className="lead-form__coming-soon-modal" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              className="lead-form__coming-soon-close"
-              onClick={closeComingSoon}
-              aria-label="Close"
-            >
-              &times;
-            </button>
-            <div className="lead-form__coming-soon-content">
-              <img
-                src="/logo.png"
-                alt="AMUHI Logo"
-                className="lead-form__coming-soon-logo"
-              />
-              <img
-                src={ComingSoonImage}
-                alt="Coming Soon"
-                className="lead-form__coming-soon-image"
-              />
-              <h3 className="lead-form__coming-soon-title">Coming Soon</h3>
-              <p className="lead-form__coming-soon-text">
-                Fitur registrasi akan segera hadir. Nantikan update selanjutnya!
-              </p>
-            </div>
-          </div>
-        </div>,
-        document.body
-      )}
     </div>
   );
 }
