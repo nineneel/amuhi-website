@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import LeadForm, { type LeadFormData } from '../../../components/common/LeadForm';
+import LeadForm from '../../../components/common/LeadForm';
+import { useRegister } from '../../../hooks/use-register';
 import hero1 from '../../../assets/home-hero/hero-1.jpg';
 import hero2 from '../../../assets/home-hero/hero-2.webp';
 import hero3 from '../../../assets/home-hero/hero-3.webp';
@@ -37,11 +38,7 @@ const stats = [
 
 export default function Hero() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const handleSubmit = (payload: LeadFormData) => {
-        console.log('Form submitted:', payload);
-        setIsModalOpen(false);
-    };
+    const { mutate, isPending, isSuccess, error, reset } = useRegister();
 
     return (
         <section id="home" className="hero">
@@ -105,7 +102,11 @@ export default function Hero() {
                     <LeadForm
                         title="Let us know better by filling out this form"
                         buttonText="Submit"
-                        onSubmit={handleSubmit}
+                        onSubmit={mutate}
+                        isLoading={isPending}
+                        isSuccess={isSuccess}
+                        error={error}
+                        onReset={reset}
                     />
                 </div>
             </div>
@@ -123,7 +124,11 @@ export default function Hero() {
                         <LeadForm
                             title="Let us know better by filling out this form"
                             buttonText="Submit"
-                            onSubmit={handleSubmit}
+                            onSubmit={mutate}
+                            isLoading={isPending}
+                            isSuccess={isSuccess}
+                            error={error}
+                            onReset={reset}
                         />
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import type { ProgramRegistrationFeature } from '../../../types/program';
 import { BookIcon, renderProgramIcon } from '../icons';
-import LeadForm, { type LeadFormData } from '../../../components/common/LeadForm';
+import LeadForm from '../../../components/common/LeadForm';
+import { useRegister } from '../../../hooks/use-register';
 import './Registration.css';
 
 type RegistrationProps = {
@@ -22,9 +23,7 @@ const defaultFeatures: ProgramRegistrationFeature[] = [
 ];
 
 export default function Registration({ programName, features }: RegistrationProps) {
-  const handleSubmit = (data: LeadFormData) => {
-    console.log('Registration submitted', { ...data, program: programName });
-  };
+  const { mutate, isPending, isSuccess, error, reset } = useRegister();
 
   const items = features?.length ? features : defaultFeatures;
 
@@ -67,7 +66,11 @@ export default function Registration({ programName, features }: RegistrationProp
             subtitle="Let us know you better"
             buttonText="Submit Registration"
             variant="light"
-            onSubmit={handleSubmit}
+            onSubmit={mutate}
+            isLoading={isPending}
+            isSuccess={isSuccess}
+            error={error}
+            onReset={reset}
           />
         </div>
       </div>
