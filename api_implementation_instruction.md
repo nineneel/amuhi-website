@@ -186,10 +186,18 @@ const { error } = useSomeMutation();
 
 ## Environment Variables
 
-The API base URL is configured via `.env`:
+The API base URL is configured via Vite env vars. Important: values are injected at **build time** (they are baked into the compiled JS). Updating `.env` on the server after deploying static files will not change the API URL.
+
+Configure it via `.env` (local/dev):
 
 ```
 VITE_API_BASE_URL=http://localhost:8000/api/v1
+```
+
+For staging builds (when running `vite build --mode staging`), create `.env.staging`:
+
+```
+VITE_API_BASE_URL=https://hub.amuhi.id/api/v1
 ```
 
 For production, create `.env.production`:
