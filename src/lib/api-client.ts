@@ -14,7 +14,7 @@ function resolveApiBaseUrl(): string | null {
   if (typeof window !== 'undefined') {
     const host = window.location.hostname;
     const isAmuhiDomain = host === 'amuhi.id' || host.endsWith('.amuhi.id');
-    if (isAmuhiDomain) return 'https://hub.amuhi.id/api/v1';
+    if (isAmuhiDomain) return 'https://portal.amuhi.id/api/v1';
   }
 
   // Local fallback for dev if someone forgets `.env`.
