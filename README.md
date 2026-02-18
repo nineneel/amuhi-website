@@ -99,23 +99,26 @@ src/
 
 ### Staging
 
-Staging is deployed automatically when pushing to the `staging` branch.
+Staging is deployed automatically when pushing a tag that matches `v*`.
 
 ```bash
-git push origin staging
+# Create a version tag
+git tag v1.0.0
+
+# Push the tag to trigger staging deployment
+git push origin v1.0.0
 ```
 
 ### Production
 
-Production is deployed automatically when a version tag is pushed.
+Production is deployed automatically when a GitHub Release is published.
 
 ```bash
-# Create a tag
-git tag v1.0.0
-
-# Push the tag to trigger deployment
-git push origin v1.0.0
+# Using GitHub CLI:
+gh release create v1.0.0 --generate-notes
 ```
+
+Or create and publish a release from GitHub: **Releases** -> **Draft a new release** -> **Publish release**.
 
 Both workflows can also be triggered manually from the **Actions** tab on GitHub.
 

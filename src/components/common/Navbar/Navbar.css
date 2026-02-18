@@ -17,6 +17,12 @@
   gap: 8px;
 }
 
+.navbar-mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
 .navbar-logo {
   display: none;
 }
@@ -204,6 +210,10 @@
     justify-content: space-between;
     width: 100%;
   }
+
+  .navbar-mobile-actions {
+    display: flex;
+  }
   
   .mobile-menu-btn {
     display: flex;
@@ -248,6 +258,15 @@
     width: 100%;
     text-align: center;
     padding: 12px 16px;
+  }
+
+  .navbar-register-btn {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    padding: 10px 18px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
   }
 
   /* Mobile Submenu */

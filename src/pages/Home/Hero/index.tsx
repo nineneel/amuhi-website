@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -36,8 +35,9 @@ const stats = [
     { line1: 'Protection &', line2: 'Support System' },
 ];
 
+const REGISTER_URL = 'https://portal.amuhi.id/register';
+
 export default function Hero() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
     const { mutate, isPending, isSuccess, error, reset } = useRegister();
 
     return (
@@ -69,7 +69,7 @@ export default function Hero() {
                                     <p className="hero-description">{slide.description}</p>
                                     <button
                                         className="hero-cta-button"
-                                        onClick={() => setIsModalOpen(true)}
+                                        onClick={() => window.location.assign(REGISTER_URL)}
                                     >
                                         Get Started
                                     </button>
@@ -110,29 +110,6 @@ export default function Hero() {
                     />
                 </div>
             </div>
-
-            {/* Modal for mobile */}
-            {isModalOpen && (
-                <div className="hero-modal-overlay" onClick={() => setIsModalOpen(false)}>
-                    <div className="hero-modal-content" onClick={(e) => e.stopPropagation()}>
-                        <button
-                            className="hero-modal-close"
-                            onClick={() => setIsModalOpen(false)}
-                        >
-                            ×
-                        </button>
-                        <LeadForm
-                            title="Let us know better by filling out this form"
-                            buttonText="Submit"
-                            onSubmit={mutate}
-                            isLoading={isPending}
-                            isSuccess={isSuccess}
-                            error={error}
-                            onReset={reset}
-                        />
-                    </div>
-                </div>
-            )}
         </section>
     );
 }

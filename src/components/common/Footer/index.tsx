@@ -7,7 +7,7 @@ const navigationLinks = [
     { label: 'Programs', to: '/#programs' },
     { label: 'About Us', to: '/about' },
     { label: 'News', to: '/news' },
-    { label: 'Our Activity', to: '/activity' },
+    { label: 'Activity', to: '/activity' },
 ];
 
 export default function Footer() {
@@ -70,7 +70,7 @@ export default function Footer() {
                     <div className="footer-bottom-links">
                         <Link to="/about">About Us</Link>
                         <Link to="/news">News</Link>
-                        <Link to="/activity">Our Activity</Link>
+                        <Link to="/activity">Activity</Link>
                         <Link to="/#home">Back to Top</Link>
                     </div>
                 </div>

@@ -115,7 +115,7 @@ export default function OurActivityPage() {
   return (
     <div className="activity-page">
       <SEO
-        title="Our Activity - AMUHI"
+        title="Activity - AMUHI"
         description="Timeline aktivitas dan kegiatan AMUHI - Free Webinar setiap tanggal 8"
         image={HERO_IMAGE}
         url="/activity"
@@ -135,7 +135,7 @@ export default function OurActivityPage() {
             </div>
 
             <h1 className="activity-hero__title">
-              Our Activity
+              Activity
             </h1>
 
             <p className="activity-hero__lead">
