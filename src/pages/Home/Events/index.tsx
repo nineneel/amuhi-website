@@ -36,7 +36,7 @@ export default function Events() {
     return (
         <section id="events" className="events-section section">
             <div className="container">
-                <h2 className="section-title">OUR EVENTS</h2>
+                <h2 className="section-title">OUR ACTIVITY</h2>
                 <EventCarousel events={events} />
             </div>
         </section>

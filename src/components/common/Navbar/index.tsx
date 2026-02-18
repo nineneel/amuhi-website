@@ -15,7 +15,7 @@ const navLinks: NavLink[] = [
     { name: 'Programs', href: '/', hasSubmenu: true },
     { name: 'About Us', href: '/about' },
     { name: 'News', href: '/news' },
-    { name: 'Our Activity', href: '/activity' },
+    { name: 'Activity', href: '/activity' },
 ];
 
 export default function Navbar() {
@@ -37,7 +37,7 @@ export default function Navbar() {
             } else if (location.pathname === '/about') {
                 setActiveLink('About Us');
             } else if (location.pathname === '/activity') {
-                setActiveLink('Our Activity');
+                setActiveLink('Activity');
             } else {
                 setActiveLink('');
             }
@@ -119,15 +119,24 @@ export default function Navbar() {
                     <span className="navbar-logo-text">AMUHI</span>
                 </Link>
 
-                <button
-                    className="mobile-menu-btn"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div className="navbar-mobile-actions">
+                    <button
+                        className="mobile-menu-btn"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <a
+                        className="nav-link active navbar-register-btn"
+                        href="https://portal.amuhi.id/register"
+                    >
+                        <span>Daftar Sekarang</span>
+                    </a>
+                </div>
 
                 <ul className={`navbar-nav ${isMobileMenuOpen ? 'open' : ''}`}>
                     {navLinks.map((link) => (
